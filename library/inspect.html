@@ -20,7 +20,7 @@
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="copyright" title="저작권" href="../copyright.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="next" title="29.13. site --- Site-specific configuration hook" href="site.html" />
     <link rel="prev" title="29.11. gc --- Garbage Collector interface" href="gc.html" />
     <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
@@ -37,7 +37,7 @@
       <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="일반 색인"
+          <a href="../genindex.html" title="General Index"
              accesskey="I">索引</a></li>
         <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
@@ -54,17 +54,17 @@
         <li>
           <span class="language_switcher_placeholder">zh</span>
           <span class="version_switcher_placeholder">3.6.5</span>
-          <a href="../index.html">도큐멘테이션 </a> &#187;
+          <a href="../index.html">Documentation </a> &#187;
         </li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >파이썬 표준 라이브러리</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="python.html" accesskey="U">29. Python Runtime Services</a> &#187;</li>
     <li class="right">
         
 
     <div class="inline-search" style="display: none" role="search">
         <form class="inline-search" action="../search.html" method="get">
-          <input placeholder="빠른 검색" type="text" name="q" />
+          <input placeholder="Quick search" type="text" name="q" />
           <input type="submit" value="Go" />
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
@@ -643,7 +643,7 @@ not guaranteed.</p>
 <code class="descclassname">inspect.</code><code class="descname">isgetsetdescriptor</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#inspect.isgetsetdescriptor" title="永久链接至目标">¶</a></dt>
 <dd><p>Return true if the object is a getset descriptor.</p>
 <div class="impl-detail compound">
-<p><strong>CPython 구현 상세:</strong> getsets are attributes defined in extension modules via
+<p><strong>CPython implementation detail:</strong> getsets are attributes defined in extension modules via
 <a class="reference internal" href="../c-api/structures.html#c.PyGetSetDef" title="PyGetSetDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyGetSetDef</span></code></a> structures.  For Python implementations without such
 types, this method will always return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </div>
@@ -654,7 +654,7 @@ types, this method will always return <code class="docutils literal notranslate"
 <code class="descclassname">inspect.</code><code class="descname">ismemberdescriptor</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#inspect.ismemberdescriptor" title="永久链接至目标">¶</a></dt>
 <dd><p>Return true if the object is a member descriptor.</p>
 <div class="impl-detail compound">
-<p><strong>CPython 구현 상세:</strong> Member descriptors are attributes defined in extension modules via
+<p><strong>CPython implementation detail:</strong> Member descriptors are attributes defined in extension modules via
 <a class="reference internal" href="../c-api/structures.html#c.PyMemberDef" title="PyMemberDef"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyMemberDef</span></code></a> structures.  For Python implementations without such
 types, this method will always return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </div>
@@ -906,7 +906,7 @@ annotations.</p>
 <dd><p>The name of the parameter as a string.  The name must be a valid
 Python identifier.</p>
 <div class="impl-detail compound">
-<p class="compound-first"><strong>CPython 구현 상세:</strong> CPython generates implicit parameter names of the form <code class="docutils literal notranslate"><span class="pre">.0</span></code> on the
+<p class="compound-first"><strong>CPython implementation detail:</strong> CPython generates implicit parameter names of the form <code class="docutils literal notranslate"><span class="pre">.0</span></code> on the
 code objects used to implement comprehensions and generator
 expressions.</p>
 <div class="compound-last versionchanged">
@@ -1392,7 +1392,7 @@ is returned.</p>
 <code class="descclassname">inspect.</code><code class="descname">currentframe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inspect.currentframe" title="永久链接至目标">¶</a></dt>
 <dd><p>Return the frame object for the caller's stack frame.</p>
 <div class="impl-detail compound">
-<p><strong>CPython 구현 상세:</strong> This function relies on Python stack frame support in the interpreter,
+<p><strong>CPython implementation detail:</strong> This function relies on Python stack frame support in the interpreter,
 which isn't guaranteed to exist in all implementations of Python.  If
 running in an implementation without Python stack frame support this
 function returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
@@ -1544,7 +1544,7 @@ generator, and all the same caveats apply.</p>
 then an empty dictionary is returned.  <a class="reference internal" href="exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> is raised if
 <em>generator</em> is not a Python generator object.</p>
 <div class="impl-detail compound">
-<p><strong>CPython 구현 상세:</strong> This function relies on the generator exposing a Python stack frame
+<p><strong>CPython implementation detail:</strong> This function relies on the generator exposing a Python stack frame
 for introspection, which isn't guaranteed to be the case in all
 implementations of Python. In such cases, this function will always
 return an empty dictionary.</p>
@@ -1701,12 +1701,12 @@ appended a colon and the qualified name of the target object.</p>
   <p class="topless"><a href="site.html"
                         title="下一章">29.13. <code class="docutils literal notranslate"><span class="pre">site</span></code> --- Site-specific configuration hook</a></p>
   <div role="note" aria-label="source link">
-    <h3>이 페이지</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../bugs.html">버그 보고하기</a></li>
+      <li><a href="../bugs.html">Report a Bug</a></li>
       <li>
         <a href="https://github.com/python/cpython/blob/3.6/Doc/library/inspect.rst"
-            rel="nofollow">소스 보기
+            rel="nofollow">Show Source
         </a>
       </li>
     </ul>
@@ -1719,7 +1719,7 @@ appended a colon and the qualified name of the target object.</p>
       <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="일반 색인"
+          <a href="../genindex.html" title="General Index"
              >索引</a></li>
         <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
@@ -1736,17 +1736,17 @@ appended a colon and the qualified name of the target object.</p>
         <li>
           <span class="language_switcher_placeholder">zh</span>
           <span class="version_switcher_placeholder">3.6.5</span>
-          <a href="../index.html">도큐멘테이션 </a> &#187;
+          <a href="../index.html">Documentation </a> &#187;
         </li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >파이썬 표준 라이브러리</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="python.html" >29. Python Runtime Services</a> &#187;</li>
     <li class="right">
         
 
     <div class="inline-search" style="display: none" role="search">
         <form class="inline-search" action="../search.html" method="get">
-          <input placeholder="빠른 검색" type="text" name="q" />
+          <input placeholder="Quick search" type="text" name="q" />
           <input type="submit" value="Go" />
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
@@ -1759,15 +1759,15 @@ appended a colon and the qualified name of the target object.</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">저작권</a> 2001-2018, Python Software Foundation.
+    &copy; <a href="../copyright.html">Copyright</a> 2001-2018, Python Software Foundation.
     <br />
-    파이썬 소프트웨어 재단은 비영리 법인입니다.
-    <a href="https://www.python.org/psf/donations/">기부를 부탁합니다.</a>
+    The Python Software Foundation is a non-profit corporation.
+    <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    4月 21, 2018 에 마지막으로 업데이트되었습니다.
-    <a href="../bugs.html">버그를 찾았나요?</a>
+    Last updated on 4月 27, 2018.
+    <a href="../bugs.html">Found a bug</a>?
     <br />
-    <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2 를 사용해서 만들었습니다.
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.
     </div>
 
   </body>

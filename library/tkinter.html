@@ -20,7 +20,7 @@
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="copyright" title="저작권" href="../copyright.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="next" title="25.2. tkinter.ttk --- Tk themed widgets" href="tkinter.ttk.html" />
     <link rel="prev" title="25. Graphical User Interfaces with Tk" href="tk.html" />
     <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
@@ -37,7 +37,7 @@
       <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="일반 색인"
+          <a href="../genindex.html" title="General Index"
              accesskey="I">索引</a></li>
         <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
@@ -54,17 +54,17 @@
         <li>
           <span class="language_switcher_placeholder">zh</span>
           <span class="version_switcher_placeholder">3.6.5</span>
-          <a href="../index.html">도큐멘테이션 </a> &#187;
+          <a href="../index.html">Documentation </a> &#187;
         </li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >파이썬 표준 라이브러리</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="tk.html" accesskey="U">25. Graphical User Interfaces with Tk</a> &#187;</li>
     <li class="right">
         
 
     <div class="inline-search" style="display: none" role="search">
         <form class="inline-search" action="../search.html" method="get">
-          <input placeholder="빠른 검색" type="text" name="q" />
+          <input placeholder="Quick search" type="text" name="q" />
           <input type="submit" value="Go" />
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
@@ -89,12 +89,15 @@
 <p>The <a class="reference internal" href="#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> package (&quot;Tk interface&quot;) is the standard Python interface to
 the Tk GUI toolkit.  Both Tk and <a class="reference internal" href="#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> are available on most Unix
 platforms, as well as on Windows systems.  (Tk itself is not part of Python; it
-is maintained at ActiveState.) You can check that <a class="reference internal" href="#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> is properly
-installed on your system by running <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">tkinter</span></code> from the command line;
-this should open a window demonstrating a simple Tk interface.</p>
+is maintained at ActiveState.)</p>
+<p>Running <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">tkinter</span></code> from the command line should open a window
+demonstrating a simple Tk interface, letting you know that <a class="reference internal" href="#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> is
+properly installed on your system, and also showing what version of Tcl/Tk is
+installed, so you can read the Tcl/Tk documentation specific to that version.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">参见</p>
-<dl class="last docutils">
+<p>Tkinter documentation:</p>
+<dl class="docutils">
 <dt><a class="reference external" href="https://wiki.python.org/moin/TkInter">Python Tkinter Resources</a></dt>
 <dd>The Python Tkinter Topic Guide provides a great deal of information on using Tk
 from Python and links to other sources of information on Tk.</dd>
@@ -104,14 +107,26 @@ from Python and links to other sources of information on Tk.</dd>
 <dd>On-line reference material.</dd>
 <dt><a class="reference external" href="http://effbot.org/tkinterbook/">Tkinter docs from effbot</a></dt>
 <dd>Online reference for tkinter supported by effbot.org.</dd>
-<dt><a class="reference external" href="https://www.tcl.tk/man/tcl8.5/">Tcl/Tk manual</a></dt>
-<dd>Official manual for the latest tcl/tk version.</dd>
-<dt><a class="reference external" href="http://learning-python.com/books/about-pp4e.html">Programming Python</a></dt>
+<dt><a class="reference external" href="http://learning-python.com/about-pp4e.html">Programming Python</a></dt>
 <dd>Book by Mark Lutz, has excellent coverage of Tkinter.</dd>
-<dt><a class="reference external" href="http://www.amazon.com/Modern-Tkinter-Python-Developers-ebook/dp/B0071QDNLO/">Modern Tkinter for Busy Python Developers</a></dt>
+<dt><a class="reference external" href="https://www.amazon.com/Modern-Tkinter-Python-Developers-ebook/dp/B0071QDNLO/">Modern Tkinter for Busy Python Developers</a></dt>
 <dd>Book by Mark Rozerman about building attractive and modern graphical user interfaces with Python and Tkinter.</dd>
 <dt><a class="reference external" href="https://www.manning.com/books/python-and-tkinter-programming">Python and Tkinter Programming</a></dt>
-<dd>The book by John Grayson (ISBN 1-884777-81-3).</dd>
+<dd>Book by John Grayson (ISBN 1-884777-81-3).</dd>
+</dl>
+<p>Tcl/Tk documentation:</p>
+<dl class="last docutils">
+<dt><a class="reference external" href="https://www.tcl.tk/man/tcl8.6/TkCmd/contents.htm">Tk commands</a></dt>
+<dd>Most commands are available as <a class="reference internal" href="#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> or <a class="reference internal" href="tkinter.ttk.html#module-tkinter.ttk" title="tkinter.ttk: Tk themed widget set"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.ttk</span></code></a> classes.
+Change '8.6' to match the version of your Tcl/Tk installation.</dd>
+<dt><a class="reference external" href="https://www.tcl.tk/doc/">Tcl/Tk recent man pages</a></dt>
+<dd>Recent Tcl/Tk manuals on www.tcl.tk.</dd>
+<dt><a class="reference external" href="http://tcl.activestate.com/">ActiveState Tcl Home Page</a></dt>
+<dd>The Tk/Tcl development is largely taking place at ActiveState.</dd>
+<dt><a class="reference external" href="https://www.amazon.com/exec/obidos/ASIN/020163337X">Tcl and the Tk Toolkit</a></dt>
+<dd>Book by John Ousterhout, the inventor of Tcl.</dd>
+<dt><a class="reference external" href="http://www.beedub.com/book/">Practical Programming in Tcl and Tk</a></dt>
+<dd>Brent Welch's encyclopedic book.</dd>
 </dl>
 </div>
 <div class="section" id="tkinter-modules">
@@ -217,19 +232,6 @@ man pages.</li>
 <li><code class="file docutils literal notranslate"><span class="pre">tkinter/__init__.py</span></code> is a last resort for most, but can be a good
 place to go when nothing else makes sense.</li>
 </ul>
-<div class="admonition seealso">
-<p class="first admonition-title">参见</p>
-<dl class="last docutils">
-<dt><a class="reference external" href="https://www.tcl.tk/man/tcl8.6/">Tcl/Tk 8.6 man pages</a></dt>
-<dd>The Tcl/Tk manual on www.tcl.tk.</dd>
-<dt><a class="reference external" href="http://tcl.activestate.com/">ActiveState Tcl Home Page</a></dt>
-<dd>The Tk/Tcl development is largely taking place at ActiveState.</dd>
-<dt><a class="reference external" href="http://www.amazon.com/exec/obidos/ASIN/020163337X">Tcl and the Tk Toolkit</a></dt>
-<dd>The book by John Ousterhout, the inventor of Tcl.</dd>
-<dt><a class="reference external" href="http://www.beedub.com/book/">Practical Programming in Tcl and Tk</a></dt>
-<dd>Brent Welch's encyclopedic book.</dd>
-</dl>
-</div>
 </div>
 <div class="section" id="a-simple-hello-world-program">
 <h3>25.1.2.2. A Simple Hello World Program<a class="headerlink" href="#a-simple-hello-world-program" title="永久链接至标题">¶</a></h3>
@@ -919,12 +921,12 @@ The callback is called as follows:</p>
   <p class="topless"><a href="tkinter.ttk.html"
                         title="下一章">25.2. <code class="docutils literal notranslate"><span class="pre">tkinter.ttk</span></code> --- Tk themed widgets</a></p>
   <div role="note" aria-label="source link">
-    <h3>이 페이지</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../bugs.html">버그 보고하기</a></li>
+      <li><a href="../bugs.html">Report a Bug</a></li>
       <li>
         <a href="https://github.com/python/cpython/blob/3.6/Doc/library/tkinter.rst"
-            rel="nofollow">소스 보기
+            rel="nofollow">Show Source
         </a>
       </li>
     </ul>
@@ -937,7 +939,7 @@ The callback is called as follows:</p>
       <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="일반 색인"
+          <a href="../genindex.html" title="General Index"
              >索引</a></li>
         <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
@@ -954,17 +956,17 @@ The callback is called as follows:</p>
         <li>
           <span class="language_switcher_placeholder">zh</span>
           <span class="version_switcher_placeholder">3.6.5</span>
-          <a href="../index.html">도큐멘테이션 </a> &#187;
+          <a href="../index.html">Documentation </a> &#187;
         </li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >파이썬 표준 라이브러리</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="tk.html" >25. Graphical User Interfaces with Tk</a> &#187;</li>
     <li class="right">
         
 
     <div class="inline-search" style="display: none" role="search">
         <form class="inline-search" action="../search.html" method="get">
-          <input placeholder="빠른 검색" type="text" name="q" />
+          <input placeholder="Quick search" type="text" name="q" />
           <input type="submit" value="Go" />
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
@@ -977,15 +979,15 @@ The callback is called as follows:</p>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">저작권</a> 2001-2018, Python Software Foundation.
+    &copy; <a href="../copyright.html">Copyright</a> 2001-2018, Python Software Foundation.
     <br />
-    파이썬 소프트웨어 재단은 비영리 법인입니다.
-    <a href="https://www.python.org/psf/donations/">기부를 부탁합니다.</a>
+    The Python Software Foundation is a non-profit corporation.
+    <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    4月 21, 2018 에 마지막으로 업데이트되었습니다.
-    <a href="../bugs.html">버그를 찾았나요?</a>
+    Last updated on 4月 27, 2018.
+    <a href="../bugs.html">Found a bug</a>?
     <br />
-    <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2 를 사용해서 만들었습니다.
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.
     </div>
 
   </body>

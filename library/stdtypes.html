@@ -20,7 +20,7 @@
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="copyright" title="저작권" href="../copyright.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="next" title="5. Built-in Exceptions" href="exceptions.html" />
     <link rel="prev" title="3. Built-in Constants" href="constants.html" />
     <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
@@ -37,7 +37,7 @@
       <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="일반 색인"
+          <a href="../genindex.html" title="General Index"
              accesskey="I">索引</a></li>
         <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
@@ -54,16 +54,16 @@
         <li>
           <span class="language_switcher_placeholder">zh</span>
           <span class="version_switcher_placeholder">3.6.5</span>
-          <a href="../index.html">도큐멘테이션 </a> &#187;
+          <a href="../index.html">Documentation </a> &#187;
         </li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">파이썬 표준 라이브러리</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">The Python Standard Library</a> &#187;</li>
     <li class="right">
         
 
     <div class="inline-search" style="display: none" role="search">
         <form class="inline-search" action="../search.html" method="get">
-          <input placeholder="빠른 검색" type="text" name="q" />
+          <input placeholder="Quick search" type="text" name="q" />
           <input type="submit" value="Go" />
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
@@ -672,7 +672,7 @@ given by reduction modulo <code class="docutils literal notranslate"><span class
 made available to Python as the <code class="xref py py-attr docutils literal notranslate"><span class="pre">modulus</span></code> attribute of
 <a class="reference internal" href="sys.html#sys.hash_info" title="sys.hash_info"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.hash_info</span></code></a>.</p>
 <div class="impl-detail compound">
-<p><strong>CPython 구현 상세:</strong> Currently, the prime used is <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">2**31</span> <span class="pre">-</span> <span class="pre">1</span></code> on machines with 32-bit C
+<p><strong>CPython implementation detail:</strong> Currently, the prime used is <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">2**31</span> <span class="pre">-</span> <span class="pre">1</span></code> on machines with 32-bit C
 longs and <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">2**61</span> <span class="pre">-</span> <span class="pre">1</span></code> on machines with 64-bit C longs.</p>
 </div>
 <p>Here are the rules in detail:</p>
@@ -905,7 +905,7 @@ index <em>i</em> and before index <em>j</em>)</td>
 and lists are compared lexicographically by comparing corresponding elements.
 This means that to compare equal, every element must compare equal and the
 two sequences must be of the same type and have the same length.  (For full
-details see <a class="reference internal" href="../reference/expressions.html#comparisons"><span class="std std-ref">비교</span></a> in the language reference.)</p>
+details see <a class="reference internal" href="../reference/expressions.html#comparisons"><span class="std std-ref">Comparisons</span></a> in the language reference.)</p>
 <p>Notes:</p>
 <ol class="arabic">
 <li><p class="first">While the <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operations are used only for simple
@@ -1185,7 +1185,7 @@ guarantees not to change the relative order of elements that compare equal
 --- this is helpful for sorting in multiple passes (for example, sort by
 department, then by salary grade).</p>
 <div class="impl-detail compound">
-<p><strong>CPython 구현 상세:</strong> While a list is being sorted, the effect of attempting to mutate, or even
+<p><strong>CPython implementation detail:</strong> While a list is being sorted, the effect of attempting to mutate, or even
 inspect, the list is undefined.  The C implementation of Python makes the
 list appear empty for the duration, and raises <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if it can
 detect that the list has been mutated during a sort.</p>
@@ -1375,7 +1375,7 @@ be included in the string literal.</p>
 <p>String literals that are part of a single expression and have only whitespace
 between them will be implicitly converted to a single string literal. That
 is, <code class="docutils literal notranslate"><span class="pre">(&quot;spam</span> <span class="pre">&quot;</span> <span class="pre">&quot;eggs&quot;)</span> <span class="pre">==</span> <span class="pre">&quot;spam</span> <span class="pre">eggs&quot;</span></code>.</p>
-<p>See <a class="reference internal" href="../reference/lexical_analysis.html#strings"><span class="std std-ref">문자열과 바이트열 리터럴</span></a> for more about the various forms of string literal,
+<p>See <a class="reference internal" href="../reference/lexical_analysis.html#strings"><span class="std std-ref">String and Bytes literals</span></a> for more about the various forms of string literal,
 including supported escape sequences, and the <code class="docutils literal notranslate"><span class="pre">r</span></code> (&quot;raw&quot;) prefix that
 disables most escape sequence processing.</p>
 <p>Strings may also be created from other objects using the <a class="reference internal" href="#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>
@@ -1422,7 +1422,7 @@ Python).  For example:</p>
 </div>
 <p>For more information on the <code class="docutils literal notranslate"><span class="pre">str</span></code> class and its methods, see
 <a class="reference internal" href="#textseq"><span class="std std-ref">Text Sequence Type --- str</span></a> and the <a class="reference internal" href="#string-methods"><span class="std std-ref">String Methods</span></a> section below.  To output
-formatted strings, see the <a class="reference internal" href="../reference/lexical_analysis.html#f-strings"><span class="std std-ref">포맷 문자열 리터럴</span></a> and <a class="reference internal" href="string.html#formatstrings"><span class="std std-ref">Format String Syntax</span></a>
+formatted strings, see the <a class="reference internal" href="../reference/lexical_analysis.html#f-strings"><span class="std std-ref">Formatted string literals</span></a> and <a class="reference internal" href="string.html#formatstrings"><span class="std std-ref">Format String Syntax</span></a>
 sections.  In addition, see the <a class="reference internal" href="text.html#stringservices"><span class="std std-ref">Text Processing Services</span></a> section.</p>
 </dd></dl>
 
@@ -1648,7 +1648,7 @@ property value Numeric_Type=Digit or Numeric_Type=Decimal.</p>
 <dt id="str.isidentifier">
 <code class="descclassname">str.</code><code class="descname">isidentifier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#str.isidentifier" title="永久链接至目标">¶</a></dt>
 <dd><p>Return true if the string is a valid identifier according to the language
-definition, section <a class="reference internal" href="../reference/lexical_analysis.html#identifiers"><span class="std std-ref">식별자와 키워드</span></a>.</p>
+definition, section <a class="reference internal" href="../reference/lexical_analysis.html#identifiers"><span class="std std-ref">Identifiers and keywords</span></a>.</p>
 <p>Use <a class="reference internal" href="keyword.html#keyword.iskeyword" title="keyword.iskeyword"><code class="xref py py-func docutils literal notranslate"><span class="pre">keyword.iskeyword()</span></code></a> to test for reserved identifiers such as
 <a class="reference internal" href="../reference/compound_stmts.html#def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">def</span></code></a> and <a class="reference internal" href="../reference/compound_stmts.html#class"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">class</span></code></a>.</p>
 </dd></dl>
@@ -2315,7 +2315,7 @@ literals, except that a <code class="docutils literal notranslate"><span class="
 declared source code encoding). Any binary values over 127 must be entered
 into bytes literals using the appropriate escape sequence.</p>
 <p>As with string literals, bytes literals may also use a <code class="docutils literal notranslate"><span class="pre">r</span></code> prefix to disable
-processing of escape sequences. See <a class="reference internal" href="../reference/lexical_analysis.html#strings"><span class="std std-ref">문자열과 바이트열 리터럴</span></a> for more about the various
+processing of escape sequences. See <a class="reference internal" href="../reference/lexical_analysis.html#strings"><span class="std std-ref">String and Bytes literals</span></a> for more about the various
 forms of bytes literal, including supported escape sequences.</p>
 <p>While bytes literals and representations are based on ASCII text, bytes
 objects actually behave like immutable sequences of integers, with each
@@ -4546,7 +4546,7 @@ not recommended.</p>
 </div>
 <div class="section" id="classes-and-class-instances">
 <span id="typesobjects"></span><h3>4.12.2. Classes and Class Instances<a class="headerlink" href="#classes-and-class-instances" title="永久链接至标题">¶</a></h3>
-<p>See <a class="reference internal" href="../reference/datamodel.html#objects"><span class="std std-ref">객체, 값, 형</span></a> and <a class="reference internal" href="../reference/compound_stmts.html#class"><span class="std std-ref">클래스 정의</span></a> for these.</p>
+<p>See <a class="reference internal" href="../reference/datamodel.html#objects"><span class="std std-ref">Objects, values and types</span></a> and <a class="reference internal" href="../reference/compound_stmts.html#class"><span class="std std-ref">Class definitions</span></a> for these.</p>
 </div>
 <div class="section" id="functions">
 <span id="typesfunctions"></span><h3>4.12.3. Functions<a class="headerlink" href="#functions" title="永久链接至标题">¶</a></h3>
@@ -4555,7 +4555,7 @@ function object is to call it: <code class="docutils literal notranslate"><span 
 <p>There are really two flavors of function objects: built-in functions and
 user-defined functions.  Both support the same operation (to call the function),
 but the implementation is different, hence the different object types.</p>
-<p>See <a class="reference internal" href="../reference/compound_stmts.html#function"><span class="std std-ref">함수 정의</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../reference/compound_stmts.html#function"><span class="std std-ref">Function definitions</span></a> for more information.</p>
 </div>
 <div class="section" id="methods">
 <span id="typesmethods"></span><h3>4.12.4. Methods<a class="headerlink" href="#methods" title="永久链接至标题">¶</a></h3>
@@ -4591,7 +4591,7 @@ attribute, you need to explicitly set it on the underlying function object:</p>
 <span class="go">&#39;my name is method&#39;</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../reference/datamodel.html#types"><span class="std std-ref">표준형 계층</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../reference/datamodel.html#types"><span class="std std-ref">The standard type hierarchy</span></a> for more information.</p>
 </div>
 <div class="section" id="code-objects">
 <span id="bltin-code-objects"></span><span id="index-50"></span><h3>4.12.5. Code Objects<a class="headerlink" href="#code-objects" title="永久链接至标题">¶</a></h3>
@@ -4603,7 +4603,7 @@ and can be extracted from function objects through their <code class="xref py py
 attribute. See also the <a class="reference internal" href="code.html#module-code" title="code: Facilities to implement read-eval-print loops."><code class="xref py py-mod docutils literal notranslate"><span class="pre">code</span></code></a> module.</p>
 <p id="index-52">A code object can be executed or evaluated by passing it (instead of a source
 string) to the <a class="reference internal" href="functions.html#exec" title="exec"><code class="xref py py-func docutils literal notranslate"><span class="pre">exec()</span></code></a> or <a class="reference internal" href="functions.html#eval" title="eval"><code class="xref py py-func docutils literal notranslate"><span class="pre">eval()</span></code></a>  built-in functions.</p>
-<p>See <a class="reference internal" href="../reference/datamodel.html#types"><span class="std std-ref">표준형 계층</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../reference/datamodel.html#types"><span class="std std-ref">The standard type hierarchy</span></a> for more information.</p>
 </div>
 <div class="section" id="type-objects">
 <span id="bltin-type-objects"></span><h3>4.12.6. Type Objects<a class="headerlink" href="#type-objects" title="永久链接至标题">¶</a></h3>
@@ -4622,7 +4622,7 @@ supports no special operations.  There is exactly one null object, named
 </div>
 <div class="section" id="the-ellipsis-object">
 <span id="bltin-ellipsis-object"></span><h3>4.12.8. The Ellipsis Object<a class="headerlink" href="#the-ellipsis-object" title="永久链接至标题">¶</a></h3>
-<p>This object is commonly used by slicing (see <a class="reference internal" href="../reference/expressions.html#slicings"><span class="std std-ref">슬라이싱(Slicings)</span></a>).  It supports no
+<p>This object is commonly used by slicing (see <a class="reference internal" href="../reference/expressions.html#slicings"><span class="std std-ref">Slicings</span></a>).  It supports no
 special operations.  There is exactly one ellipsis object, named
 <a class="reference internal" href="constants.html#Ellipsis" title="Ellipsis"><code class="xref py py-const docutils literal notranslate"><span class="pre">Ellipsis</span></code></a> (a built-in name).  <code class="docutils literal notranslate"><span class="pre">type(Ellipsis)()</span></code> produces the
 <a class="reference internal" href="constants.html#Ellipsis" title="Ellipsis"><code class="xref py py-const docutils literal notranslate"><span class="pre">Ellipsis</span></code></a> singleton.</p>
@@ -4631,7 +4631,7 @@ special operations.  There is exactly one ellipsis object, named
 <div class="section" id="the-notimplemented-object">
 <span id="bltin-notimplemented-object"></span><h3>4.12.9. The NotImplemented Object<a class="headerlink" href="#the-notimplemented-object" title="永久链接至标题">¶</a></h3>
 <p>This object is returned from comparisons and binary operations when they are
-asked to operate on types they don't support. See <a class="reference internal" href="../reference/expressions.html#comparisons"><span class="std std-ref">비교</span></a> for more
+asked to operate on types they don't support. See <a class="reference internal" href="../reference/expressions.html#comparisons"><span class="std std-ref">Comparisons</span></a> for more
 information.  There is exactly one <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code> object.
 <code class="docutils literal notranslate"><span class="pre">type(NotImplemented)()</span></code> produces the singleton instance.</p>
 <p>It is written as <code class="docutils literal notranslate"><span class="pre">NotImplemented</span></code>.</p>
@@ -4649,7 +4649,7 @@ Boolean, if the value can be interpreted as a truth value (see section
 </div>
 <div class="section" id="internal-objects">
 <span id="typesinternal"></span><h3>4.12.11. Internal Objects<a class="headerlink" href="#internal-objects" title="永久链接至标题">¶</a></h3>
-<p>See <a class="reference internal" href="../reference/datamodel.html#types"><span class="std std-ref">표준형 계층</span></a> for this information.  It describes stack frame objects,
+<p>See <a class="reference internal" href="../reference/datamodel.html#types"><span class="std std-ref">The standard type hierarchy</span></a> for this information.  It describes stack frame objects,
 traceback objects, and slice objects.</p>
 </div>
 </div>
@@ -4726,7 +4726,7 @@ Example:</p>
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Additional information on these special methods may be found in the Python
-Reference Manual (<a class="reference internal" href="../reference/datamodel.html#customization"><span class="std std-ref">기본적인 커스터마이제이션</span></a>).</td></tr>
+Reference Manual (<a class="reference internal" href="../reference/datamodel.html#customization"><span class="std std-ref">Basic customization</span></a>).</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="id13" rules="none">
@@ -4836,12 +4836,12 @@ element is the tuple to be formatted.</td></tr>
   <p class="topless"><a href="exceptions.html"
                         title="下一章">5. Built-in Exceptions</a></p>
   <div role="note" aria-label="source link">
-    <h3>이 페이지</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../bugs.html">버그 보고하기</a></li>
+      <li><a href="../bugs.html">Report a Bug</a></li>
       <li>
         <a href="https://github.com/python/cpython/blob/3.6/Doc/library/stdtypes.rst"
-            rel="nofollow">소스 보기
+            rel="nofollow">Show Source
         </a>
       </li>
     </ul>
@@ -4854,7 +4854,7 @@ element is the tuple to be formatted.</td></tr>
       <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="일반 색인"
+          <a href="../genindex.html" title="General Index"
              >索引</a></li>
         <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
@@ -4871,16 +4871,16 @@ element is the tuple to be formatted.</td></tr>
         <li>
           <span class="language_switcher_placeholder">zh</span>
           <span class="version_switcher_placeholder">3.6.5</span>
-          <a href="../index.html">도큐멘테이션 </a> &#187;
+          <a href="../index.html">Documentation </a> &#187;
         </li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >파이썬 표준 라이브러리</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
     <li class="right">
         
 
     <div class="inline-search" style="display: none" role="search">
         <form class="inline-search" action="../search.html" method="get">
-          <input placeholder="빠른 검색" type="text" name="q" />
+          <input placeholder="Quick search" type="text" name="q" />
           <input type="submit" value="Go" />
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
@@ -4893,15 +4893,15 @@ element is the tuple to be formatted.</td></tr>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">저작권</a> 2001-2018, Python Software Foundation.
+    &copy; <a href="../copyright.html">Copyright</a> 2001-2018, Python Software Foundation.
     <br />
-    파이썬 소프트웨어 재단은 비영리 법인입니다.
-    <a href="https://www.python.org/psf/donations/">기부를 부탁합니다.</a>
+    The Python Software Foundation is a non-profit corporation.
+    <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    4月 21, 2018 에 마지막으로 업데이트되었습니다.
-    <a href="../bugs.html">버그를 찾았나요?</a>
+    Last updated on 4月 27, 2018.
+    <a href="../bugs.html">Found a bug</a>?
     <br />
-    <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2 를 사용해서 만들었습니다.
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.
     </div>
 
   </body>

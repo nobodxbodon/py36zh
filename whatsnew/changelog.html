@@ -20,8 +20,8 @@
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="copyright" title="저작권" href="../copyright.html" />
-    <link rel="next" title="测试python入门教程" href="../tutorial/index.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="The Python Tutorial" href="../tutorial/index.html" />
     <link rel="prev" title="What&#39;s New in Python 2.0" href="2.0.html" />
     <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
     <link rel="canonical" href="https://docs.python.org/3/whatsnew/changelog.html" />
@@ -93,13 +93,13 @@
       <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="일반 색인"
+          <a href="../genindex.html" title="General Index"
              accesskey="I">索引</a></li>
         <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="../tutorial/index.html" title="测试python入门教程"
+          <a href="../tutorial/index.html" title="The Python Tutorial"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="2.0.html" title="What&#39;s New in Python 2.0"
@@ -110,7 +110,7 @@
         <li>
           <span class="language_switcher_placeholder">zh</span>
           <span class="version_switcher_placeholder">3.6.5</span>
-          <a href="../index.html">도큐멘테이션 </a> &#187;
+          <a href="../index.html">Documentation </a> &#187;
         </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">What's New in Python</a> &#187;</li>
@@ -119,7 +119,7 @@
 
     <div class="inline-search" style="display: none" role="search">
         <form class="inline-search" action="../search.html" method="get">
-          <input placeholder="빠른 검색" type="text" name="q" />
+          <input placeholder="Quick search" type="text" name="q" />
           <input type="submit" value="Go" />
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
@@ -156,6 +156,9 @@ when copying from key-sharing dict.</li>
 <div class="section" id="library">
 <h3>Library<a class="headerlink" href="#library" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<li><a class="reference external" href="https://bugs.python.org/issue33329">bpo-33329</a>: Fix multiprocessing regression on newer glibcs</li>
+<li><a class="reference external" href="https://bugs.python.org/issue991266">bpo-991266</a>: Fix quoting of the <code class="docutils literal notranslate"><span class="pre">Comment</span></code> attribute of
+<a class="reference internal" href="../library/http.cookies.html#http.cookies.SimpleCookie" title="http.cookies.SimpleCookie"><code class="xref py py-class docutils literal notranslate"><span class="pre">http.cookies.SimpleCookie</span></code></a>.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33131">bpo-33131</a>: Upgrade bundled version of pip to 10.0.1.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33308">bpo-33308</a>: Fixed a crash in the <a class="reference internal" href="../library/parser.html#module-parser" title="parser: Access parse trees for Python source code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">parser</span></code></a> module when converting an ST
 object to a tree of tuples or lists with <code class="docutils literal notranslate"><span class="pre">line_info=False</span></code> and
@@ -179,6 +182,8 @@ by Nir Soffer.</li>
 containing an integer mask and only 1 bit left for addresses.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue32844">bpo-32844</a>: Fix wrong redirection of a low descriptor (0 or 1) to stderr in
 subprocess if another low descriptor is closed.</li>
+<li><a class="reference external" href="https://bugs.python.org/issue31457">bpo-31457</a>: If nested log adapters are used, the inner <code class="docutils literal notranslate"><span class="pre">process()</span></code>
+methods are no longer omitted.</li>
 </ul>
 </div>
 <div class="section" id="documentation">
@@ -8709,14 +8714,14 @@ Kilburn.</li>
                         title="上一章">What's New in Python 2.0</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="../tutorial/index.html"
-                        title="下一章">测试python入门教程</a></p>
+                        title="下一章">The Python Tutorial</a></p>
   <div role="note" aria-label="source link">
-    <h3>이 페이지</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../bugs.html">버그 보고하기</a></li>
+      <li><a href="../bugs.html">Report a Bug</a></li>
       <li>
         <a href="https://github.com/python/cpython/blob/3.6/Doc/whatsnew/changelog.rst"
-            rel="nofollow">소스 보기
+            rel="nofollow">Show Source
         </a>
       </li>
     </ul>
@@ -8729,13 +8734,13 @@ Kilburn.</li>
       <h3>导航</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="일반 색인"
+          <a href="../genindex.html" title="General Index"
              >索引</a></li>
         <li class="right" >
           <a href="../py-modindex.html" title="Python 模块索引"
              >模块</a> |</li>
         <li class="right" >
-          <a href="../tutorial/index.html" title="测试python入门教程"
+          <a href="../tutorial/index.html" title="The Python Tutorial"
              >下一页</a> |</li>
         <li class="right" >
           <a href="2.0.html" title="What&#39;s New in Python 2.0"
@@ -8746,7 +8751,7 @@ Kilburn.</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
           <span class="version_switcher_placeholder">3.6.5</span>
-          <a href="../index.html">도큐멘테이션 </a> &#187;
+          <a href="../index.html">Documentation </a> &#187;
         </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >What's New in Python</a> &#187;</li>
@@ -8755,7 +8760,7 @@ Kilburn.</li>
 
     <div class="inline-search" style="display: none" role="search">
         <form class="inline-search" action="../search.html" method="get">
-          <input placeholder="빠른 검색" type="text" name="q" />
+          <input placeholder="Quick search" type="text" name="q" />
           <input type="submit" value="Go" />
           <input type="hidden" name="check_keywords" value="yes" />
           <input type="hidden" name="area" value="default" />
@@ -8768,15 +8773,15 @@ Kilburn.</li>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">저작권</a> 2001-2018, Python Software Foundation.
+    &copy; <a href="../copyright.html">Copyright</a> 2001-2018, Python Software Foundation.
     <br />
-    파이썬 소프트웨어 재단은 비영리 법인입니다.
-    <a href="https://www.python.org/psf/donations/">기부를 부탁합니다.</a>
+    The Python Software Foundation is a non-profit corporation.
+    <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    4月 21, 2018 에 마지막으로 업데이트되었습니다.
-    <a href="../bugs.html">버그를 찾았나요?</a>
+    Last updated on 4月 27, 2018.
+    <a href="../bugs.html">Found a bug</a>?
     <br />
-    <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2 를 사용해서 만들었습니다.
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.
     </div>
 
   </body>

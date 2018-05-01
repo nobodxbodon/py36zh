@@ -156,6 +156,8 @@ when copying from key-sharing dict.</li>
 <div class="section" id="library">
 <h3>Library<a class="headerlink" href="#library" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<li><a class="reference external" href="https://bugs.python.org/issue33383">bpo-33383</a>: Fixed crash in the get() method of the <a class="reference internal" href="../library/dbm.html#module-dbm.ndbm" title="dbm.ndbm: The standard &quot;database&quot; interface, based on ndbm. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm.ndbm</span></code></a> database
+object when it is called with a single argument.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33329">bpo-33329</a>: Fix multiprocessing regression on newer glibcs</li>
 <li><a class="reference external" href="https://bugs.python.org/issue991266">bpo-991266</a>: Fix quoting of the <code class="docutils literal notranslate"><span class="pre">Comment</span></code> attribute of
 <a class="reference internal" href="../library/http.cookies.html#http.cookies.SimpleCookie" title="http.cookies.SimpleCookie"><code class="xref py py-class docutils literal notranslate"><span class="pre">http.cookies.SimpleCookie</span></code></a>.</li>
@@ -163,6 +165,8 @@ when copying from key-sharing dict.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33308">bpo-33308</a>: Fixed a crash in the <a class="reference internal" href="../library/parser.html#module-parser" title="parser: Access parse trees for Python source code."><code class="xref py py-mod docutils literal notranslate"><span class="pre">parser</span></code></a> module when converting an ST
 object to a tree of tuples or lists with <code class="docutils literal notranslate"><span class="pre">line_info=False</span></code> and
 <code class="docutils literal notranslate"><span class="pre">col_info=True</span></code>.</li>
+<li><a class="reference external" href="https://bugs.python.org/issue33256">bpo-33256</a>: Fix display of <code class="docutils literal notranslate"><span class="pre">&lt;module&gt;</span></code> call in the html produced by
+<code class="docutils literal notranslate"><span class="pre">cgitb.html()</span></code>. Patch by Stéphane Blondon.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33203">bpo-33203</a>: <code class="docutils literal notranslate"><span class="pre">random.Random.choice()</span></code> now raises <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> for empty
 sequences consistently even when called from subclasses without a
 <code class="docutils literal notranslate"><span class="pre">getrandbits()</span></code> implementation.</li>
@@ -229,6 +233,10 @@ behavior when writing outside a window, or pad.</li>
 <div class="section" id="idle">
 <h3>IDLE<a class="headerlink" href="#idle" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<li><a class="reference external" href="https://bugs.python.org/issue21474">bpo-21474</a>: Update word/identifier definition from ascii to unicode. In
+text and entry boxes, this affects selection by double-click, movement
+left/right by control-left/right, and deletion left/right by control-
+BACKSPACE/DEL.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33204">bpo-33204</a>: IDLE: consistently color invalid string prefixes. A 'u' string
 prefix cannot be paired with either 'r' or 'f'. Consistently color as much
 of the prefix, starting at the right, as is valid. Revise and extend
@@ -8778,7 +8786,7 @@ Kilburn.</li>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 4月 27, 2018.
+    Last updated on 4月 30, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

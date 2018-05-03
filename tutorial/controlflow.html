@@ -454,29 +454,29 @@ write the function like this instead:</p>
 <span id="tut-keywordargs"></span><h3>4.7.2. Keyword Arguments<a class="headerlink" href="#keyword-arguments" title="永久链接至标题">¶</a></h3>
 <p>Functions can also be called using <a class="reference internal" href="../glossary.html#term-keyword-argument"><span class="xref std std-term">keyword arguments</span></a>
 of the form <code class="docutils literal notranslate"><span class="pre">kwarg=value</span></code>.  For instance, the following function:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">parrot</span><span class="p">(</span><span class="n">voltage</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="s1">&#39;a stiff&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;voom&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;Norwegian Blue&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- This parrot wouldn&#39;t&quot;</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;if you put&quot;</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="s2">&quot;volts through it.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Lovely plumage, the&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- It&#39;s&quot;</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="p">,</span> <span class="n">状态</span><span class="o">=</span><span class="s1">&#39;死透了&#39;</span><span class="p">,</span> <span class="n">行为</span><span class="o">=</span><span class="s1">&#39;咋呼&#39;</span><span class="p">,</span> <span class="n">种类</span><span class="o">=</span><span class="s1">&#39;挪威蓝&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- 这只鹦鹉不会&quot;</span><span class="p">,</span> <span class="n">行为</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;即使你用&quot;</span><span class="p">,</span> <span class="n">电压</span><span class="p">,</span> <span class="s2">&quot;伏的电压电它.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- 多漂亮的羽毛, 这&quot;</span><span class="p">,</span> <span class="n">种类</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- 它&quot;</span><span class="p">,</span> <span class="n">状态</span><span class="p">,</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>accepts one required argument (<code class="docutils literal notranslate"><span class="pre">voltage</span></code>) and three optional arguments
 (<code class="docutils literal notranslate"><span class="pre">state</span></code>, <code class="docutils literal notranslate"><span class="pre">action</span></code>, and <code class="docutils literal notranslate"><span class="pre">type</span></code>).  This function can be called in any
 of the following ways:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">parrot</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>                                          <span class="c1"># 1 positional argument</span>
-<span class="n">parrot</span><span class="p">(</span><span class="n">voltage</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>                                  <span class="c1"># 1 keyword argument</span>
-<span class="n">parrot</span><span class="p">(</span><span class="n">voltage</span><span class="o">=</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;VOOOOOM&#39;</span><span class="p">)</span>             <span class="c1"># 2 keyword arguments</span>
-<span class="n">parrot</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;VOOOOOM&#39;</span><span class="p">,</span> <span class="n">voltage</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>             <span class="c1"># 2 keyword arguments</span>
-<span class="n">parrot</span><span class="p">(</span><span class="s1">&#39;a million&#39;</span><span class="p">,</span> <span class="s1">&#39;bereft of life&#39;</span><span class="p">,</span> <span class="s1">&#39;jump&#39;</span><span class="p">)</span>         <span class="c1"># 3 positional arguments</span>
-<span class="n">parrot</span><span class="p">(</span><span class="s1">&#39;a thousand&#39;</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="s1">&#39;pushing up the daisies&#39;</span><span class="p">)</span>  <span class="c1"># 1 positional, 1 keyword</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">鹦鹉</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>                                          <span class="c1"># 1个位置参数</span>
+<span class="n">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>                                      <span class="c1"># 1个关键词参数</span>
+<span class="n">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="o">=</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">行为</span><span class="o">=</span><span class="s1">&#39;咋咋呼呼&#39;</span><span class="p">)</span>                    <span class="c1"># 2个关键词参数</span>
+<span class="n">鹦鹉</span><span class="p">(</span><span class="n">行为</span><span class="o">=</span><span class="s1">&#39;咋咋呼呼&#39;</span><span class="p">,</span> <span class="n">电压</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>                    <span class="c1"># 2个关键词参数</span>
+<span class="n">鹦鹉</span><span class="p">(</span><span class="s1">&#39;一百万&#39;</span><span class="p">,</span> <span class="s1">&#39;没命了&#39;</span><span class="p">,</span> <span class="s1">&#39;跳&#39;</span><span class="p">)</span>                         <span class="c1"># 3个位置参数</span>
+<span class="n">鹦鹉</span><span class="p">(</span><span class="s1">&#39;一千&#39;</span><span class="p">,</span> <span class="n">状态</span><span class="o">=</span><span class="s1">&#39;坟头长草了&#39;</span><span class="p">)</span>                         <span class="c1"># 1个位置参数, 1个关键词参数</span>
 </pre></div>
 </div>
 <p>but all the following calls would be invalid:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">parrot</span><span class="p">()</span>                     <span class="c1"># required argument missing</span>
-<span class="n">parrot</span><span class="p">(</span><span class="n">voltage</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="s1">&#39;dead&#39;</span><span class="p">)</span>  <span class="c1"># non-keyword argument after a keyword argument</span>
-<span class="n">parrot</span><span class="p">(</span><span class="mi">110</span><span class="p">,</span> <span class="n">voltage</span><span class="o">=</span><span class="mi">220</span><span class="p">)</span>     <span class="c1"># duplicate value for the same argument</span>
-<span class="n">parrot</span><span class="p">(</span><span class="n">actor</span><span class="o">=</span><span class="s1">&#39;John Cleese&#39;</span><span class="p">)</span>  <span class="c1"># unknown keyword argument</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">鹦鹉</span><span class="p">()</span>                     <span class="c1"># 欠缺必需的参数</span>
+<span class="n">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="s1">&#39;死了&#39;</span><span class="p">)</span>      <span class="c1"># 非关键词参数在关键词参数之后</span>
+<span class="n">鹦鹉</span><span class="p">(</span><span class="mi">110</span><span class="p">,</span> <span class="n">电压</span><span class="o">=</span><span class="mi">220</span><span class="p">)</span>         <span class="c1"># 同一参数的重复赋值</span>
+<span class="n">鹦鹉</span><span class="p">(</span><span class="n">演员</span><span class="o">=</span><span class="s1">&#39;John Cleese&#39;</span><span class="p">)</span>    <span class="c1"># 未知的关键词参数</span>
 </pre></div>
 </div>
 <p>In a function call, keyword arguments must follow positional arguments.
@@ -486,13 +486,13 @@ accepted by the function (e.g. <code class="docutils literal notranslate"><span 
 non-optional arguments (e.g. <code class="docutils literal notranslate"><span class="pre">parrot(voltage=1000)</span></code> is valid too).
 No argument may receive a value more than once.
 Here's an example that fails due to this restriction:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">函数</span><span class="p">(</span><span class="n">参数</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">pass</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">function</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">函数</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">参数</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
-<span class="gr">TypeError</span>: <span class="n">function() got multiple values for keyword argument &#39;a&#39;</span>
+<span class="gr">TypeError</span>: <span class="n">函数() got multiple values for keyword argument &#39;参数&#39;</span>
 </pre></div>
 </div>
 <p>When a final formal parameter of the form <code class="docutils literal notranslate"><span class="pre">**name</span></code> is present, it receives a
@@ -502,33 +502,33 @@ parameter of the form <code class="docutils literal notranslate"><span class="pr
 receives a tuple containing the positional arguments beyond the formal parameter
 list.  (<code class="docutils literal notranslate"><span class="pre">*name</span></code> must occur before <code class="docutils literal notranslate"><span class="pre">**name</span></code>.) For example, if we define a
 function like this:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cheeseshop</span><span class="p">(</span><span class="n">kind</span><span class="p">,</span> <span class="o">*</span><span class="n">arguments</span><span class="p">,</span> <span class="o">**</span><span class="n">keywords</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Do you have any&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- I&#39;m sorry, we&#39;re all out of&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">奶酪店</span><span class="p">(</span><span class="n">种类</span><span class="p">,</span> <span class="o">*</span><span class="n">所有参数</span><span class="p">,</span> <span class="o">**</span><span class="n">所有关键词</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- 你有没有&quot;</span><span class="p">,</span> <span class="n">种类</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- 抱歉, 我们已经卖光了&quot;</span><span class="p">,</span> <span class="n">种类</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">参数</span> <span class="ow">in</span> <span class="n">所有参数</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">参数</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">kw</span> <span class="ow">in</span> <span class="n">keywords</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">kw</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">keywords</span><span class="p">[</span><span class="n">kw</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">索引</span> <span class="ow">in</span> <span class="n">所有关键词</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">索引</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">所有关键词</span><span class="p">[</span><span class="n">索引</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>It could be called like this:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">cheeseshop</span><span class="p">(</span><span class="s2">&quot;Limburger&quot;</span><span class="p">,</span> <span class="s2">&quot;It&#39;s very runny, sir.&quot;</span><span class="p">,</span>
-           <span class="s2">&quot;It&#39;s really very, VERY runny, sir.&quot;</span><span class="p">,</span>
-           <span class="n">shopkeeper</span><span class="o">=</span><span class="s2">&quot;Michael Palin&quot;</span><span class="p">,</span>
-           <span class="n">client</span><span class="o">=</span><span class="s2">&quot;John Cleese&quot;</span><span class="p">,</span>
-           <span class="n">sketch</span><span class="o">=</span><span class="s2">&quot;Cheese Shop Sketch&quot;</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">奶酪店</span><span class="p">(</span><span class="s2">&quot;林堡奶酪&quot;</span><span class="p">,</span> <span class="s2">&quot;它滑溜着呢, 先生.&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;它真的非常, 非常滑溜, 先生.&quot;</span><span class="p">,</span>
+           <span class="n">经理</span><span class="o">=</span><span class="s2">&quot;Michael Palin&quot;</span><span class="p">,</span>
+           <span class="n">客人</span><span class="o">=</span><span class="s2">&quot;John Cleese&quot;</span><span class="p">,</span>
+           <span class="n">脚本</span><span class="o">=</span><span class="s2">&quot;奶酪店脚本&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and of course it would print:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-- Do you have any Limburger ?
--- I&#39;m sorry, we&#39;re all out of Limburger
-It&#39;s very runny, sir.
-It&#39;s really very, VERY runny, sir.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-- 你有没有林堡奶酪 ?
+-- 抱歉, 我们已经卖光了 林堡奶酪
+它滑溜着呢, 先生.
+它真的非常, 非常滑溜, 先生.
 ----------------------------------------
-shopkeeper : Michael Palin
-client : John Cleese
-sketch : Cheese Shop Sketch
+经理 : Michael Palin
+客人 : John Cleese
+脚本 : 奶酪店脚本
 </pre></div>
 </div>
 <p>Note that the order in which the keyword arguments are printed is guaranteed
@@ -540,8 +540,8 @@ to match the order in which they were provided in the function call.</p>
 called with an arbitrary number of arguments.  These arguments will be wrapped
 up in a tuple (see <a class="reference internal" href="datastructures.html#tut-tuples"><span class="std std-ref">Tuples and Sequences</span></a>).  Before the variable number of arguments,
 zero or more normal arguments may occur.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">write_multiple_items</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">separator</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">separator</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">写入几个东西</span><span class="p">(</span><span class="n">文件</span><span class="p">,</span> <span class="n">分隔符</span><span class="p">,</span> <span class="o">*</span><span class="n">参数</span><span class="p">):</span>
+    <span class="n">文件</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">分隔符</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">参数</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Normally, these <code class="docutils literal notranslate"><span class="pre">variadic</span></code> arguments will be last in the list of formal
@@ -835,7 +835,7 @@ callee makes to it (items inserted into a list).</td></tr>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 4月 30, 2018.
+    Last updated on 5月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

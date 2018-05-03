@@ -145,6 +145,7 @@
 <div class="section" id="core-and-builtins">
 <h3>Core and Builtins<a class="headerlink" href="#core-and-builtins" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<li><a class="reference external" href="https://bugs.python.org/issue33391">bpo-33391</a>: Fix a leak in set_symmetric_difference().</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33231">bpo-33231</a>: Fix potential memory leak in <code class="docutils literal notranslate"><span class="pre">normalizestring()</span></code>.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue29922">bpo-29922</a>: Improved error messages in 'async with' when <code class="docutils literal notranslate"><span class="pre">__aenter__()</span></code>
 or <code class="docutils literal notranslate"><span class="pre">__aexit__()</span></code> return non-awaitable object.</li>
@@ -186,6 +187,9 @@ by Nir Soffer.</li>
 containing an integer mask and only 1 bit left for addresses.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue32844">bpo-32844</a>: Fix wrong redirection of a low descriptor (0 or 1) to stderr in
 subprocess if another low descriptor is closed.</li>
+<li><a class="reference external" href="https://bugs.python.org/issue31908">bpo-31908</a>: Fix output of cover files for <code class="docutils literal notranslate"><span class="pre">trace</span></code> module command-line
+tool. Previously emitted cover files only when <code class="docutils literal notranslate"><span class="pre">--missing</span></code> option was
+used. Patch by Michael Selik.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue31457">bpo-31457</a>: If nested log adapters are used, the inner <code class="docutils literal notranslate"><span class="pre">process()</span></code>
 methods are no longer omitted.</li>
 </ul>
@@ -193,6 +197,7 @@ methods are no longer omitted.</li>
 <div class="section" id="documentation">
 <h3>Documentation<a class="headerlink" href="#documentation" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<li><a class="reference external" href="https://bugs.python.org/issue33378">bpo-33378</a>: Add Korean language switcher for <a class="reference external" href="https://docs.python.org/3/">https://docs.python.org/3/</a></li>
 <li><a class="reference external" href="https://bugs.python.org/issue33276">bpo-33276</a>: Clarify that the <code class="docutils literal notranslate"><span class="pre">__path__</span></code> attribute on modules cannot be
 just any value.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33201">bpo-33201</a>: Modernize documentation for writing C extension types.</li>
@@ -8786,7 +8791,7 @@ Kilburn.</li>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 4月 30, 2018.
+    Last updated on 5月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

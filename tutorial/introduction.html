@@ -324,19 +324,19 @@ to obtain individual characters, <em>slicing</em> allows you to obtain substring
 </div>
 <p>Note how the start is always included, and the end always excluded.  This
 makes sure that <code class="docutils literal notranslate"><span class="pre">s[:i]</span> <span class="pre">+</span> <span class="pre">s[i:]</span></code> is always equal to <code class="docutils literal notranslate"><span class="pre">s</span></code>:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">词</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
 <span class="go">&#39;Python&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">词</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
 <span class="go">&#39;Python&#39;</span>
 </pre></div>
 </div>
 <p>Slice indices have useful defaults; an omitted first index defaults to zero, an
 omitted second index defaults to the size of the string being sliced.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>   <span class="c1"># 从开始到位置2(不包含)的所有字母</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>   <span class="c1"># 从开始到位置2(不包含)的所有字母</span>
 <span class="go">&#39;Py&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>   <span class="c1"># 从位置4(包含)到最后的所有字母</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>   <span class="c1"># 从位置4(包含)到最后的所有字母</span>
 <span class="go">&#39;on&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>  <span class="c1"># 从倒数第2位(包含)到最后的所有字母</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>  <span class="c1"># 从倒数第2位(包含)到最后的所有字母</span>
 <span class="go">&#39;on&#39;</span>
 </pre></div>
 </div>
@@ -359,7 +359,7 @@ respectively.</p>
 indices, if both are within bounds.  For example, the length of <code class="docutils literal notranslate"><span class="pre">word[1:3]</span></code> is
 2.</p>
 <p>Attempting to use an index that is too large will result in an error:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">42</span><span class="p">]</span>  <span class="c1"># the word only has 6 characters</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[</span><span class="mi">42</span><span class="p">]</span>  <span class="c1"># 词只有6个字符</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
 <span class="gr">IndexError</span>: <span class="n">string index out of range</span>
@@ -367,26 +367,26 @@ indices, if both are within bounds.  For example, the length of <code class="doc
 </div>
 <p>However, out of range slice indexes are handled gracefully when used for
 slicing:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">42</span><span class="p">]</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">42</span><span class="p">]</span>
 <span class="go">&#39;on&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">42</span><span class="p">:]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[</span><span class="mi">42</span><span class="p">:]</span>
 <span class="go">&#39;&#39;</span>
 </pre></div>
 </div>
 <p>Python strings cannot be changed --- they are <a class="reference internal" href="../glossary.html#term-immutable"><span class="xref std std-term">immutable</span></a>.
 Therefore, assigning to an indexed position in the string results in an error:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;J&#39;</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;J&#39;</span>
 <span class="go">  ...</span>
 <span class="go">TypeError: &#39;str&#39; object does not support item assignment</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="s1">&#39;py&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="s1">&#39;py&#39;</span>
 <span class="go">  ...</span>
 <span class="go">TypeError: &#39;str&#39; object does not support item assignment</span>
 </pre></div>
 </div>
 <p>If you need a different string, you should create a new one:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;J&#39;</span> <span class="o">+</span> <span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;J&#39;</span> <span class="o">+</span> <span class="n">词</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
 <span class="go">&#39;Jython&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;py&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;py&#39;</span>
 <span class="go">&#39;Pypy&#39;</span>
 </pre></div>
 </div>
@@ -684,7 +684,7 @@ need to escape <code class="docutils literal notranslate"><span class="pre">&quo
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 03, 2018.
+    Last updated on 5月 04, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

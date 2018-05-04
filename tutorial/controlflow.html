@@ -549,13 +549,13 @@ parameters, because they scoop up all remaining input arguments that are
 passed to the function. Any formal parameters which occur after the <code class="docutils literal notranslate"><span class="pre">*args</span></code>
 parameter are 'keyword-only' arguments, meaning that they can only be used as
 keywords rather than positional arguments.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">concat</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="k">return</span> <span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">联结</span><span class="p">(</span><span class="o">*</span><span class="n">参数</span><span class="p">,</span> <span class="n">分隔符</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">分隔符</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">参数</span><span class="p">)</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">concat</span><span class="p">(</span><span class="s2">&quot;earth&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;venus&quot;</span><span class="p">)</span>
-<span class="go">&#39;earth/mars/venus&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">concat</span><span class="p">(</span><span class="s2">&quot;earth&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;venus&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
-<span class="go">&#39;earth.mars.venus&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">联结</span><span class="p">(</span><span class="s2">&quot;地球&quot;</span><span class="p">,</span> <span class="s2">&quot;土星&quot;</span><span class="p">,</span> <span class="s2">&quot;金星&quot;</span><span class="p">)</span>
+<span class="go">&#39;地球/土星/金星&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">联结</span><span class="p">(</span><span class="s2">&quot;地球&quot;</span><span class="p">,</span> <span class="s2">&quot;土星&quot;</span><span class="p">,</span> <span class="s2">&quot;金星&quot;</span><span class="p">,</span> <span class="n">分隔符</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="go">&#39;地球.土星.金星&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -567,22 +567,22 @@ arguments.  For instance, the built-in <a class="reference internal" href="../li
 <em>start</em> and <em>stop</em> arguments.  If they are not available separately, write the
 function call with the  <code class="docutils literal notranslate"><span class="pre">*</span></code>-operator to unpack the arguments out of a list
 or tuple:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>            <span class="c1"># normal call with separate arguments</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>            <span class="c1"># 一般调用时使用分开的参数</span>
 <span class="go">[3, 4, 5]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">))</span>            <span class="c1"># call with arguments unpacked from a list</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">参数</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">*</span><span class="n">参数</span><span class="p">))</span>            <span class="c1"># 调用时可以用列表分解成的参数</span>
 <span class="go">[3, 4, 5]</span>
 </pre></div>
 </div>
 <p id="index-3">In the same fashion, dictionaries can deliver keyword arguments with the <code class="docutils literal notranslate"><span class="pre">**</span></code>-operator:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">parrot</span><span class="p">(</span><span class="n">voltage</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="s1">&#39;a stiff&#39;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;voom&#39;</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- This parrot wouldn&#39;t&quot;</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;if you put&quot;</span><span class="p">,</span> <span class="n">voltage</span><span class="p">,</span> <span class="s2">&quot;volts through it.&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E&#39;s&quot;</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="p">,</span> <span class="n">状态</span><span class="o">=</span><span class="s1">&#39;死透了&#39;</span><span class="p">,</span> <span class="n">行为</span><span class="o">=</span><span class="s1">&#39;咋呼&#39;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- 这只鹦鹉不会&quot;</span><span class="p">,</span> <span class="n">行为</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;即使你用&quot;</span><span class="p">,</span> <span class="n">电压</span><span class="p">,</span> <span class="s2">&quot;伏的电压电它.&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;这货&quot;</span><span class="p">,</span> <span class="n">状态</span><span class="p">,</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;voltage&quot;</span><span class="p">:</span> <span class="s2">&quot;four million&quot;</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;bleedin&#39; demised&quot;</span><span class="p">,</span> <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;VOOM&quot;</span><span class="p">}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">parrot</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">)</span>
-<span class="go">-- This parrot wouldn&#39;t VOOM if you put four million volts through it. E&#39;s bleedin&#39; demised !</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">字典</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;电压&quot;</span><span class="p">:</span> <span class="s2">&quot;四百万&quot;</span><span class="p">,</span> <span class="s2">&quot;状态&quot;</span><span class="p">:</span> <span class="s2">&quot;死翘翘了&quot;</span><span class="p">,</span> <span class="s2">&quot;行为&quot;</span><span class="p">:</span> <span class="s2">&quot;咋咋呼呼&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">鹦鹉</span><span class="p">(</span><span class="o">**</span><span class="n">字典</span><span class="p">)</span>
+<span class="go">-- 这只鹦鹉不会咋咋呼呼 即使你用 四百万 伏的电压电它. 这货 死翘翘了 !</span>
 </pre></div>
 </div>
 </div>
@@ -595,10 +595,10 @@ syntactically restricted to a single expression.  Semantically, they are just
 syntactic sugar for a normal function definition.  Like nested function
 definitions, lambda functions can reference variables from the containing
 scope:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">make_incrementor</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="k">return</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">n</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">生成递增器</span><span class="p">(</span><span class="n">增量</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">增量</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">make_incrementor</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">生成递增器</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="go">42</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -835,7 +835,7 @@ callee makes to it (items inserted into a list).</td></tr>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 03, 2018.
+    Last updated on 5月 04, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

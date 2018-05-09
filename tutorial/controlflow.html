@@ -133,10 +133,10 @@ they appear in the sequence.  For example (no pun intended):</p>
 make a copy.  Iterating over a sequence does not implicitly make a copy.  The
 slice notation makes this especially convenient:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">词表</span><span class="p">[:]:</span>  <span class="c1"># 遍历截取了整个列表的拷贝.</span>
-<span class="gp">... </span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
 <span class="gp">... </span>        <span class="n">词表</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">words</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">词表</span>
 <span class="go">[&#39;丢出窗户&#39;, &#39;猫&#39;, &#39;窗户&#39;, &#39;丢出窗户&#39;]</span>
 </pre></div>
 </div>
@@ -454,7 +454,7 @@ write the function like this instead:</p>
 <span id="tut-keywordargs"></span><h3>4.7.2. Keyword Arguments<a class="headerlink" href="#keyword-arguments" title="永久链接至标题">¶</a></h3>
 <p>Functions can also be called using <a class="reference internal" href="../glossary.html#term-keyword-argument"><span class="xref std std-term">keyword arguments</span></a>
 of the form <code class="docutils literal notranslate"><span class="pre">kwarg=value</span></code>.  For instance, the following function:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="p">,</span> <span class="n">状态</span><span class="o">=</span><span class="s1">&#39;死透了&#39;</span><span class="p">,</span> <span class="n">行为</span><span class="o">=</span><span class="s1">&#39;咋呼&#39;</span><span class="p">,</span> <span class="n">种类</span><span class="o">=</span><span class="s1">&#39;挪威蓝&#39;</span><span class="p">):</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="p">,</span> <span class="n">状态</span><span class="o">=</span><span class="s1">&#39;死透了&#39;</span><span class="p">,</span> <span class="n">行为</span><span class="o">=</span><span class="s1">&#39;轰隆隆&#39;</span><span class="p">,</span> <span class="n">种类</span><span class="o">=</span><span class="s1">&#39;挪威蓝&#39;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- 这只鹦鹉不会&quot;</span><span class="p">,</span> <span class="n">行为</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;即使你用&quot;</span><span class="p">,</span> <span class="n">电压</span><span class="p">,</span> <span class="s2">&quot;伏的电压电它.&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- 多漂亮的羽毛, 这&quot;</span><span class="p">,</span> <span class="n">种类</span><span class="p">)</span>
@@ -466,8 +466,8 @@ of the form <code class="docutils literal notranslate"><span class="pre">kwarg=v
 of the following ways:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">鹦鹉</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>                                          <span class="c1"># 1个位置参数</span>
 <span class="n">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>                                      <span class="c1"># 1个关键词参数</span>
-<span class="n">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="o">=</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">行为</span><span class="o">=</span><span class="s1">&#39;咋咋呼呼&#39;</span><span class="p">)</span>                    <span class="c1"># 2个关键词参数</span>
-<span class="n">鹦鹉</span><span class="p">(</span><span class="n">行为</span><span class="o">=</span><span class="s1">&#39;咋咋呼呼&#39;</span><span class="p">,</span> <span class="n">电压</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>                    <span class="c1"># 2个关键词参数</span>
+<span class="n">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="o">=</span><span class="mi">1000000</span><span class="p">,</span> <span class="n">行为</span><span class="o">=</span><span class="s1">&#39;轰隆隆隆隆&#39;</span><span class="p">)</span>                  <span class="c1"># 2个关键词参数</span>
+<span class="n">鹦鹉</span><span class="p">(</span><span class="n">行为</span><span class="o">=</span><span class="s1">&#39;轰隆隆隆隆&#39;</span><span class="p">,</span> <span class="n">电压</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>                  <span class="c1"># 2个关键词参数</span>
 <span class="n">鹦鹉</span><span class="p">(</span><span class="s1">&#39;一百万&#39;</span><span class="p">,</span> <span class="s1">&#39;没命了&#39;</span><span class="p">,</span> <span class="s1">&#39;跳&#39;</span><span class="p">)</span>                         <span class="c1"># 3个位置参数</span>
 <span class="n">鹦鹉</span><span class="p">(</span><span class="s1">&#39;一千&#39;</span><span class="p">,</span> <span class="n">状态</span><span class="o">=</span><span class="s1">&#39;坟头长草了&#39;</span><span class="p">)</span>                         <span class="c1"># 1个位置参数, 1个关键词参数</span>
 </pre></div>
@@ -575,14 +575,14 @@ or tuple:</p>
 </pre></div>
 </div>
 <p id="index-3">In the same fashion, dictionaries can deliver keyword arguments with the <code class="docutils literal notranslate"><span class="pre">**</span></code>-operator:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="p">,</span> <span class="n">状态</span><span class="o">=</span><span class="s1">&#39;死透了&#39;</span><span class="p">,</span> <span class="n">行为</span><span class="o">=</span><span class="s1">&#39;咋呼&#39;</span><span class="p">):</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">鹦鹉</span><span class="p">(</span><span class="n">电压</span><span class="p">,</span> <span class="n">状态</span><span class="o">=</span><span class="s1">&#39;死透了&#39;</span><span class="p">,</span> <span class="n">行为</span><span class="o">=</span><span class="s1">&#39;轰隆隆&#39;</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- 这只鹦鹉不会&quot;</span><span class="p">,</span> <span class="n">行为</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;即使你用&quot;</span><span class="p">,</span> <span class="n">电压</span><span class="p">,</span> <span class="s2">&quot;伏的电压电它.&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;这货&quot;</span><span class="p">,</span> <span class="n">状态</span><span class="p">,</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">字典</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;电压&quot;</span><span class="p">:</span> <span class="s2">&quot;四百万&quot;</span><span class="p">,</span> <span class="s2">&quot;状态&quot;</span><span class="p">:</span> <span class="s2">&quot;死翘翘了&quot;</span><span class="p">,</span> <span class="s2">&quot;行为&quot;</span><span class="p">:</span> <span class="s2">&quot;咋咋呼呼&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">字典</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;电压&quot;</span><span class="p">:</span> <span class="s2">&quot;四百万&quot;</span><span class="p">,</span> <span class="s2">&quot;状态&quot;</span><span class="p">:</span> <span class="s2">&quot;死翘翘了&quot;</span><span class="p">,</span> <span class="s2">&quot;行为&quot;</span><span class="p">:</span> <span class="s2">&quot;轰隆隆隆隆&quot;</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">鹦鹉</span><span class="p">(</span><span class="o">**</span><span class="n">字典</span><span class="p">)</span>
-<span class="go">-- 这只鹦鹉不会咋咋呼呼 即使你用 四百万 伏的电压电它. 这货 死翘翘了 !</span>
+<span class="go">-- 这只鹦鹉不会 轰隆隆隆隆 即使你用 四百万 伏的电压电它. 这货 死翘翘了 !</span>
 </pre></div>
 </div>
 </div>
@@ -607,9 +607,9 @@ scope:</p>
 </div>
 <p>The above example uses a lambda expression to return a function.  Another use
 is to pass a small function as an argument:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">)]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pair</span><span class="p">:</span> <span class="n">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">所有对</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">所有对</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">对</span><span class="p">:</span> <span class="n">对</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">所有对</span>
 <span class="go">[(4, &#39;four&#39;), (1, &#39;one&#39;), (3, &#39;three&#39;), (2, &#39;two&#39;)]</span>
 </pre></div>
 </div>
@@ -639,17 +639,17 @@ indented less should not occur, but if they occur all their leading whitespace
 should be stripped.  Equivalence of whitespace should be tested after expansion
 of tabs (to 8 spaces, normally).</p>
 <p>Here is an example of a multi-line docstring:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
-<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;Do nothing, but document it.</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">我的函数</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;无作为, 仅文档.</span>
 <span class="gp">...</span><span class="sd"></span>
-<span class="gp">... </span><span class="sd">    No, really, it doesn&#39;t do anything.</span>
+<span class="gp">... </span><span class="sd">    真的不做任何事.</span>
 <span class="gp">... </span><span class="sd">    &quot;&quot;&quot;</span>
 <span class="gp">... </span>    <span class="k">pass</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">my_function</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
-<span class="go">Do nothing, but document it.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">我的函数</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="go">无作为, 仅文档.</span>
 
-<span class="go">    No, really, it doesn&#39;t do anything.</span>
+<span class="go">    真的不做任何事.</span>
 </pre></div>
 </div>
 </div>
@@ -666,15 +666,15 @@ defined by a literal <code class="docutils literal notranslate"><span class="pre
 list and the colon denoting the end of the <a class="reference internal" href="../reference/compound_stmts.html#def"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">def</span></code></a> statement.  The
 following example has a positional argument, a keyword argument, and the return
 value annotated:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">ham</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">eggs</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;eggs&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Annotations:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="vm">__annotations__</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Arguments:&quot;</span><span class="p">,</span> <span class="n">ham</span><span class="p">,</span> <span class="n">eggs</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="k">return</span> <span class="n">ham</span> <span class="o">+</span> <span class="s1">&#39; and &#39;</span> <span class="o">+</span> <span class="n">eggs</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">函数</span><span class="p">(</span><span class="n">火腿</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">鸡蛋</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;鸡蛋&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;注解:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="vm">__annotations__</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;参数:&quot;</span><span class="p">,</span> <span class="n">火腿</span><span class="p">,</span> <span class="n">鸡蛋</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">火腿</span> <span class="o">+</span> <span class="s1">&#39;和&#39;</span> <span class="o">+</span> <span class="n">鸡蛋</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span>
-<span class="go">Annotations: {&#39;ham&#39;: &lt;class &#39;str&#39;&gt;, &#39;return&#39;: &lt;class &#39;str&#39;&gt;, &#39;eggs&#39;: &lt;class &#39;str&#39;&gt;}</span>
-<span class="go">Arguments: spam eggs</span>
-<span class="go">&#39;spam and eggs&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">函数</span><span class="p">(</span><span class="s1">&#39;午餐肉&#39;</span><span class="p">)</span>
+<span class="go">注解: {&#39;火腿&#39;: &lt;class &#39;str&#39;&gt;, &#39;return&#39;: &lt;class &#39;str&#39;&gt;, &#39;鸡蛋&#39;: &lt;class &#39;str&#39;&gt;}</span>
+<span class="go">参数: 午餐肉 鸡蛋</span>
+<span class="go">&#39;午餐肉和鸡蛋&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -835,7 +835,7 @@ callee makes to it (items inserted into a list).</td></tr>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 04, 2018.
+    Last updated on 5月 09, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

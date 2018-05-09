@@ -190,14 +190,14 @@ should be added as the <em>first</em> line of the file.  The syntax is as follow
 <p>where <em>encoding</em> is one of the valid <a class="reference internal" href="../library/codecs.html#module-codecs" title="codecs: Encode and decode data and streams."><code class="xref py py-mod docutils literal notranslate"><span class="pre">codecs</span></code></a> supported by Python.</p>
 <p>For example, to declare that Windows-1252 encoding is to be used, the first
 line of your source code file should be:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: cp-1252 -*-</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: cp1252 -*-</span>
 </pre></div>
 </div>
 <p>One exception to the <em>first line</em> rule is when the source code starts with a
 <a class="reference internal" href="appendix.html#tut-scripts"><span class="std std-ref">UNIX &quot;shebang&quot; line</span></a>.  In this case, the encoding
 declaration should be added as the second line of the file.  For example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
-<span class="c1"># -*- coding: cp-1252 -*-</span>
+<span class="c1"># -*- coding: cp1252 -*-</span>
 </pre></div>
 </div>
 <p class="rubric">Footnotes</p>
@@ -304,7 +304,7 @@ simultaneously installed Python 2.x executable.</td></tr>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 04, 2018.
+    Last updated on 5月 09, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

@@ -101,17 +101,17 @@ is the module name with the suffix <code class="file docutils literal notranslat
 module's name (as a string) is available as the value of the global variable
 <code class="docutils literal notranslate"><span class="pre">__name__</span></code>.  For instance, use your favorite text editor to create a file
 called <code class="file docutils literal notranslate"><span class="pre">fibo.py</span></code> in the current directory with the following contents:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fibonacci numbers module</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 斐波那契数字模块</span>
 
-<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>    <span class="c1"># write Fibonacci series up to n</span>
+<span class="k">def</span> <span class="nf">斐波那契</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>    <span class="c1"># 打印小于n的斐波那契数列</span>
     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
         <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
     <span class="nb">print</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">fib2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>   <span class="c1"># return Fibonacci series up to n</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">def</span> <span class="nf">斐波那契2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>   <span class="c1"># 返回小于n的斐波那契数列</span>
+    <span class="n">结果</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
         <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
@@ -677,7 +677,7 @@ the module's global symbol table.</td></tr>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 04, 2018.
+    Last updated on 5月 09, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

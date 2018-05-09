@@ -152,11 +152,16 @@ or <code class="docutils literal notranslate"><span class="pre">__aexit__()</spa
 <li><a class="reference external" href="https://bugs.python.org/issue33199">bpo-33199</a>: Fix <code class="docutils literal notranslate"><span class="pre">ma_version_tag</span></code> in dict implementation is uninitialized
 when copying from key-sharing dict.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33041">bpo-33041</a>: Fixed jumping when the function contains an <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code> loop.</li>
+<li><a class="reference external" href="https://bugs.python.org/issue21983">bpo-21983</a>: Fix a crash in <a class="reference internal" href="../library/ctypes.html#ctypes.cast" title="ctypes.cast"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes.cast()</span></code></a> in case the type argument is a
+ctypes structured data type. Patch by Eryk Sun and Oren Milman.</li>
 </ul>
 </div>
 <div class="section" id="library">
 <h3>Library<a class="headerlink" href="#library" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<li><a class="reference external" href="https://bugs.python.org/issue20087">bpo-20087</a>: Updated alias mapping with glibc 2.27 supported locales.</li>
+<li><a class="reference external" href="https://bugs.python.org/issue33422">bpo-33422</a>: Fix trailing quotation marks getting deleted when looking up
+byte/string literals on pydoc. Patch by Andrés Delfino.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33383">bpo-33383</a>: Fixed crash in the get() method of the <a class="reference internal" href="../library/dbm.html#module-dbm.ndbm" title="dbm.ndbm: The standard &quot;database&quot; interface, based on ndbm. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">dbm.ndbm</span></code></a> database
 object when it is called with a single argument.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33329">bpo-33329</a>: Fix multiprocessing regression on newer glibcs</li>
@@ -8791,7 +8796,7 @@ Kilburn.</li>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 04, 2018.
+    Last updated on 5月 09, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

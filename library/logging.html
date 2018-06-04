@@ -613,9 +613,8 @@ for more information on string formatting.</p>
 <dd><p>Returns a new instance of the <a class="reference internal" href="#logging.Formatter" title="logging.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> class.  The instance is
 initialized with a format string for the message as a whole, as well as a
 format string for the date/time portion of a message.  If no <em>fmt</em> is
-specified, <code class="docutils literal notranslate"><span class="pre">'%(message)s'</span></code> is used.  If no <em>datefmt</em> is specified, an
-ISO8601-like (or RFC3339-like) date format is used. See the
-<a class="reference internal" href="#logging.Formatter.formatTime" title="logging.Formatter.formatTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatTime()</span></code></a> documentation for more details.</p>
+specified, <code class="docutils literal notranslate"><span class="pre">'%(message)s'</span></code> is used.  If no <em>datefmt</em> is specified, a format
+is used which is described in the <a class="reference internal" href="#logging.Formatter.formatTime" title="logging.Formatter.formatTime"><code class="xref py py-meth docutils literal notranslate"><span class="pre">formatTime()</span></code></a> documentation.</p>
 <p>The <em>style</em> parameter can be one of '%', '{' or '$' and determines how
 the format string will be merged with its data: using one of %-formatting,
 <a class="reference internal" href="stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a> or <a class="reference internal" href="string.html#string.Template" title="string.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">string.Template</span></code></a>. See <a class="reference internal" href="../howto/logging-cookbook.html#formatting-styles"><span class="std std-ref">Using particular formatting styles throughout your application</span></a>
@@ -653,8 +652,10 @@ wants to make use of a formatted time. This method can be overridden in
 formatters to provide for any specific requirement, but the basic behavior
 is as follows: if <em>datefmt</em> (a string) is specified, it is used with
 <a class="reference internal" href="time.html#time.strftime" title="time.strftime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code></a> to format the creation time of the
-record. Otherwise, an ISO8601-like (or RDC 3339-like) format is used.  The
-resulting string is returned.</p>
+record. Otherwise, the format '%Y-%m-%d %H:%M:%S,uuu' is used, where the
+uuu part is a millisecond value and the other letters are as per the
+<a class="reference internal" href="time.html#time.strftime" title="time.strftime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.strftime()</span></code></a> documentation.  An example time in this format is
+<code class="docutils literal notranslate"><span class="pre">2003-01-23</span> <span class="pre">00:29:50,411</span></code>.  The resulting string is returned.</p>
 <p>This function uses a user-configurable function to convert the creation
 time to a tuple. By default, <a class="reference internal" href="time.html#time.localtime" title="time.localtime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.localtime()</span></code></a> is used; to change
 this for a particular formatter instance, set the <code class="docutils literal notranslate"><span class="pre">converter</span></code> attribute
@@ -663,8 +664,8 @@ to a function with the same signature as <a class="reference internal" href="tim
 want all logging times to be shown in GMT, set the <code class="docutils literal notranslate"><span class="pre">converter</span></code>
 attribute in the <code class="docutils literal notranslate"><span class="pre">Formatter</span></code> class.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.3 版更改: </span>Previously, the default ISO8601-like format was hard-coded as in this
-example: <code class="docutils literal notranslate"><span class="pre">2010-09-06</span> <span class="pre">22:38:15,292</span></code> where the part before the comma is
+<p><span class="versionmodified">在 3.3 版更改: </span>Previously, the default format was hard-coded as in this example:
+<code class="docutils literal notranslate"><span class="pre">2010-09-06</span> <span class="pre">22:38:15,292</span></code> where the part before the comma is
 handled by a strptime format string (<code class="docutils literal notranslate"><span class="pre">'%Y-%m-%d</span> <span class="pre">%H:%M:%S'</span></code>), and the
 part after the comma is a millisecond value. Because strptime does not
 have a format placeholder for milliseconds, the millisecond value is
@@ -1578,7 +1579,7 @@ library.</dd>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 09, 2018.
+    Last updated on 6月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

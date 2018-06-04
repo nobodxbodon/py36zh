@@ -2323,7 +2323,13 @@ descriptor instead of a path.</p>
 <dl class="attribute">
 <dt id="os.stat_result.st_ino">
 <code class="descname">st_ino</code><a class="headerlink" href="#os.stat_result.st_ino" title="永久链接至目标">¶</a></dt>
-<dd><p>Inode number.</p>
+<dd><p>Platform dependent, but if non-zero, uniquely identifies the
+file for a given value of <code class="docutils literal notranslate"><span class="pre">st_dev</span></code>. Typically:</p>
+<ul class="simple">
+<li>the inode number on Unix,</li>
+<li>the <a class="reference external" href="https://msdn.microsoft.com/en-us/library/aa363788">file index</a> on
+Windows</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -2511,6 +2517,10 @@ accessing <a class="reference internal" href="#os.stat_result" title="os.stat_re
 </div>
 <div class="versionadded">
 <p><span class="versionmodified">3.5 新版功能: </span>Added the <a class="reference internal" href="#os.stat_result.st_file_attributes" title="os.stat_result.st_file_attributes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">st_file_attributes</span></code></a> member on Windows.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.5 版更改: </span>Windows now returns the file index as <a class="reference internal" href="#os.stat_result.st_ino" title="os.stat_result.st_ino"><code class="xref py py-attr docutils literal notranslate"><span class="pre">st_ino</span></code></a> when
+available.</p>
 </div>
 </dd></dl>
 
@@ -4234,7 +4244,7 @@ block in these cases, but instead immediately raises <a class="reference interna
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 09, 2018.
+    Last updated on 6月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

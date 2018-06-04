@@ -96,48 +96,44 @@ script or in an interactive instance of the interpreter. Such a file is called a
 <em>module</em>; definitions from a module can be <em>imported</em> into other modules or into
 the <em>main</em> module (the collection of variables that you have access to in a
 script executed at the top level and in calculator mode).</p>
-<p>A module is a file containing Python definitions and statements.  The file name
-is the module name with the suffix <code class="file docutils literal notranslate"><span class="pre">.py</span></code> appended.  Within a module, the
-module's name (as a string) is available as the value of the global variable
-<code class="docutils literal notranslate"><span class="pre">__name__</span></code>.  For instance, use your favorite text editor to create a file
-called <code class="file docutils literal notranslate"><span class="pre">fibo.py</span></code> in the current directory with the following contents:</p>
+<p>A module is a file containing Python definitions and statements.  The file name is the module name with the suffix <code class="file docutils literal notranslate"><span class="pre">.py</span></code> appended.  Within a module, the module's name (as a string) is available as the value of the global variable <code class="docutils literal notranslate"><span class="pre">__name__</span></code>.  For instance, use your favorite text editor to create a file called <code class="file docutils literal notranslate"><span class="pre">斐波.py</span></code> in the current directory with the following contents:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 斐波那契数字模块</span>
 
-<span class="k">def</span> <span class="nf">斐波那契</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>    <span class="c1"># 打印小于n的斐波那契数列</span>
+<span class="k">def</span> <span class="nf">斐</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>    <span class="c1"># 打印小于n的斐波那契数列</span>
     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
         <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
     <span class="nb">print</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">斐波那契2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>   <span class="c1"># 返回小于n的斐波那契数列</span>
+<span class="k">def</span> <span class="nf">斐2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>   <span class="c1"># 返回小于n的斐波那契数列</span>
     <span class="n">结果</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
-        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+        <span class="n">结果</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
         <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="n">结果</span>
 </pre></div>
 </div>
 <p>Now enter the Python interpreter and import this module with the following
 command:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">fibo</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">斐波</span>
 </pre></div>
 </div>
 <p>This does not enter the names of the functions defined in <code class="docutils literal notranslate"><span class="pre">fibo</span></code>  directly in
 the current symbol table; it only enters the module name <code class="docutils literal notranslate"><span class="pre">fibo</span></code> there. Using
 the module name you can access the functions:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fibo</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">斐波</span><span class="o">.</span><span class="n">斐</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 <span class="go">1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fibo</span><span class="o">.</span><span class="n">fib2</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">斐波</span><span class="o">.</span><span class="n">斐2</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="go">[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fibo</span><span class="o">.</span><span class="vm">__name__</span>
-<span class="go">&#39;fibo&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">斐波</span><span class="o">.</span><span class="vm">__name__</span>
+<span class="go">&#39;斐波&#39;</span>
 </pre></div>
 </div>
 <p>If you intend to use a function often you can assign it to a local name:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span> <span class="o">=</span> <span class="n">fibo</span><span class="o">.</span><span class="n">fib</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">斐</span> <span class="o">=</span> <span class="n">斐波</span><span class="o">.</span><span class="n">斐</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">斐</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 <span class="go">1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
 </pre></div>
 </div>
@@ -159,16 +155,16 @@ matter).  The imported module names are placed in the importing module's global
 symbol table.</p>
 <p>There is a variant of the <a class="reference internal" href="../reference/simple_stmts.html#import"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">import</span></code></a> statement that imports names from a
 module directly into the importing module's symbol table.  For example:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="k">import</span> <span class="n">fib</span><span class="p">,</span> <span class="n">fib2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">斐波</span> <span class="k">import</span> <span class="n">斐</span><span class="p">,</span> <span class="n">斐2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">斐</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 <span class="go">1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
 </pre></div>
 </div>
 <p>This does not introduce the module name from which the imports are taken in the
 local symbol table (so in the example, <code class="docutils literal notranslate"><span class="pre">fibo</span></code> is not defined).</p>
 <p>There is even a variant to import all names that a module defines:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="k">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">斐波</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">斐</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 <span class="go">1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
 </pre></div>
 </div>
@@ -181,16 +177,16 @@ frowned upon, since it often causes poorly readable code. However, it is okay to
 use it to save typing in interactive sessions.</p>
 <p>If the module name is followed by <a class="reference internal" href="../reference/compound_stmts.html#as"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">as</span></code></a>, then the name
 following <a class="reference internal" href="../reference/compound_stmts.html#as"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">as</span></code></a> is bound directly to the imported module.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">fibo</span> <span class="k">as</span> <span class="nn">fib</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">斐波</span> <span class="k">as</span> <span class="nn">斐</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">斐</span><span class="o">.</span><span class="n">斐</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 <span class="go">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
 </pre></div>
 </div>
 <p>This is effectively importing the module in the same way that <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">fibo</span></code>
 will do, with the only difference of it being available as <code class="docutils literal notranslate"><span class="pre">fib</span></code>.</p>
 <p>It can also be used when utilising <a class="reference internal" href="../reference/simple_stmts.html#from"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">from</span></code></a> with similar effects:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="k">import</span> <span class="n">fib</span> <span class="k">as</span> <span class="n">fibonacci</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">斐波</span> <span class="k">import</span> <span class="n">斐</span> <span class="k">as</span> <span class="n">斐波那契</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">斐波那契</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 <span class="go">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
 </pre></div>
 </div>
@@ -205,7 +201,7 @@ use <a class="reference internal" href="../library/importlib.html#importlib.relo
 <div class="section" id="executing-modules-as-scripts">
 <span id="tut-modulesasscripts"></span><h3>6.1.1. Executing modules as scripts<a class="headerlink" href="#executing-modules-as-scripts" title="永久链接至标题">¶</a></h3>
 <p>When you run a Python module with</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">fibo</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">arguments</span><span class="o">&gt;</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">斐波</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">arguments</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>the code in the module will be executed, just as if you imported it, but with
@@ -677,7 +673,7 @@ the module's global symbol table.</td></tr>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 09, 2018.
+    Last updated on 6月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

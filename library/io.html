@@ -1014,7 +1014,7 @@ takes place.  If <em>newline</em> is any of the other legal values, any <code cl
 characters written are translated to the given string.</li>
 </ul>
 <p>If <em>line_buffering</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">flush()</span></code> is implied when a call to
-write contains a newline character.</p>
+write contains a newline character or a carriage return.</p>
 <p>If <em>write_through</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, calls to <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code> are guaranteed
 not to be buffered: any data written on the <a class="reference internal" href="#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">TextIOWrapper</span></code></a>
 object is immediately handled to its underlying binary <em>buffer</em>.</p>
@@ -1248,7 +1248,7 @@ well.</p>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 09, 2018.
+    Last updated on 6月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

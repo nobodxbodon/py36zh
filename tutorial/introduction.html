@@ -261,9 +261,9 @@ the end of the line.  The following example:</p>
 </div>
 <p>Strings can be concatenated (glued together) with the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator, and
 repeated with <code class="docutils literal notranslate"><span class="pre">*</span></code>:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># 重复3次 &#39;un&#39;, 接着 &#39;ium&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">*</span> <span class="s1">&#39;un&#39;</span> <span class="o">+</span> <span class="s1">&#39;ium&#39;</span>
-<span class="go">&#39;unununium&#39;</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># 重复6次 &#39;长&#39;, 接着 &#39;消&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">6</span> <span class="o">*</span> <span class="s1">&#39;长&#39;</span> <span class="o">+</span> <span class="s1">&#39;消&#39;</span>
+<span class="go">&#39;长长长长长长消&#39;</span>
 </pre></div>
 </div>
 <p>Two or more <em>string literals</em> (i.e. the ones enclosed between quotes) next
@@ -275,7 +275,7 @@ to each other are automatically concatenated.</p>
 <p>This feature is particularly useful when you want to break long strings:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">文本</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;把多个字符串放在括号中&#39;</span>
 <span class="gp">... </span>        <span class="s1">&#39;可以将它们连接起来.&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">文本</span>
 <span class="go">&#39;把多个字符串放在括号中可以将它们连接起来.&#39;</span>
 </pre></div>
 </div>
@@ -284,13 +284,13 @@ to each other are automatically concatenated.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">前缀</span> <span class="s1">&#39;thon&#39;</span>  <span class="c1"># 不能连接一个变量和字符串量</span>
 <span class="go">  ...</span>
 <span class="go">SyntaxError: invalid syntax</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="s1">&#39;un&#39;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="s1">&#39;ium&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="s1">&#39;长&#39;</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="s1">&#39;消&#39;</span>
 <span class="go">  ...</span>
 <span class="go">SyntaxError: invalid syntax</span>
 </pre></div>
 </div>
 <p>If you want to concatenate variables or a variable and a literal, use <code class="docutils literal notranslate"><span class="pre">+</span></code>:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39;thon&#39;</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">前缀</span> <span class="o">+</span> <span class="s1">&#39;thon&#39;</span>
 <span class="go">&#39;Python&#39;</span>
 </pre></div>
 </div>
@@ -316,9 +316,9 @@ one:</p>
 <p>Note that since -0 is the same as 0, negative indices start from -1.</p>
 <p>In addition to indexing, <em>slicing</em> is also supported.  While indexing is used
 to obtain individual characters, <em>slicing</em> allows you to obtain substring:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># characters from position 0 (included) to 2 (excluded)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># 从位置0(包含)到2(不包含)的所有字母</span>
 <span class="go">&#39;Py&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># characters from position 2 (included) to 5 (excluded)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">词</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># 从位置2(包含)到5(不包含)的所有字母</span>
 <span class="go">&#39;tho&#39;</span>
 </pre></div>
 </div>
@@ -684,7 +684,7 @@ need to escape <code class="docutils literal notranslate"><span class="pre">&quo
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 09, 2018.
+    Last updated on 6月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

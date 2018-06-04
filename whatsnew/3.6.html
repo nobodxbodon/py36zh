@@ -168,7 +168,7 @@ hash algorithms and the <a class="reference internal" href="../library/hashlib.h
 </ul>
 <p>Windows improvements:</p>
 <ul class="simple">
-<li><a class="reference internal" href="#whatsnew36-pep529"><span class="std std-ref">PEP 528</span></a> and <a class="reference internal" href="#whatsnew36-pep529"><span class="std std-ref">PEP 529</span></a>,
+<li><a class="reference internal" href="#whatsnew36-pep528"><span class="std std-ref">PEP 528</span></a> and <a class="reference internal" href="#whatsnew36-pep529"><span class="std std-ref">PEP 529</span></a>,
 Windows filesystem and console encoding changed to UTF-8.</li>
 <li>The <code class="docutils literal notranslate"><span class="pre">py.exe</span></code> launcher, when used interactively, no longer prefers
 Python 2 over Python 3 when the user doesn't specify a version (via
@@ -744,7 +744,7 @@ API is considered stable.</p>
 (all backported to 3.5.x due to the provisional status):</p>
 <ul class="simple">
 <li>The <a class="reference internal" href="../library/asyncio-eventloops.html#asyncio.get_event_loop" title="asyncio.get_event_loop"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_event_loop()</span></code></a> function has been changed to
-always return the currently running loop when called from couroutines
+always return the currently running loop when called from coroutines
 and callbacks.
 (Contributed by Yury Selivanov in <a class="reference external" href="https://bugs.python.org/issue28613">bpo-28613</a>.)</li>
 <li>The <a class="reference internal" href="../library/asyncio-task.html#asyncio.ensure_future" title="asyncio.ensure_future"><code class="xref py py-func docutils literal notranslate"><span class="pre">ensure_future()</span></code></a> function and all functions that
@@ -1922,7 +1922,8 @@ Previously, a <a class="reference internal" href="../library/exceptions.html#Run
 direct references from methods to the implicit <code class="docutils literal notranslate"><span class="pre">__class__</span></code> closure
 variable, the implicit <code class="docutils literal notranslate"><span class="pre">__classcell__</span></code> namespace entry must now be passed
 up to <code class="docutils literal notranslate"><span class="pre">type.__new__</span></code> for initialisation. Failing to do so will result in
-a <a class="reference internal" href="../library/exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> in 3.6 and a <a class="reference internal" href="../library/exceptions.html#RuntimeWarning" title="RuntimeWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeWarning</span></code></a> in the future.</p>
+a <a class="reference internal" href="../library/exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> in Python 3.6 and a <a class="reference internal" href="../library/exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> in
+Python 3.8.</p>
 </li>
 </ul>
 </div>
@@ -2219,7 +2220,7 @@ locale to the <code class="docutils literal notranslate"><span class="pre">LC_NU
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 09, 2018.
+    Last updated on 6月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

@@ -235,10 +235,14 @@ event loops managed by the default policy.</p>
 <code class="descname">get_event_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asyncio.AbstractEventLoopPolicy.get_event_loop" title="永久链接至目标">¶</a></dt>
 <dd><p>Get the event loop for the current context.</p>
 <p>Returns an event loop object implementing the <a class="reference internal" href="asyncio-eventloop.html#asyncio.AbstractEventLoop" title="asyncio.AbstractEventLoop"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractEventLoop</span></code></a>
-interface.</p>
+interface. In case called from coroutine, it returns the currently
+running event loop.</p>
 <p>Raises an exception in case no event loop has been set for the current
 context and the current policy does not specify to create one. It must
 never return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.6 版更改.</span></p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -397,7 +401,7 @@ and override the methods for which you want to change behavior, for example:</p>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 09, 2018.
+    Last updated on 6月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

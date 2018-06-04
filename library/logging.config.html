@@ -790,11 +790,10 @@ below, to see how typical entries are constructed.</p>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">format</span></code> entry is the overall format string, and the <code class="docutils literal notranslate"><span class="pre">datefmt</span></code> entry is
 the <code class="xref py py-func docutils literal notranslate"><span class="pre">strftime()</span></code>-compatible date/time format string.  If empty, the
-package substitutes ISO8601-style format date/times, which is almost equivalent to
-specifying the date format string <code class="docutils literal notranslate"><span class="pre">'%Y-%m-%d</span> <span class="pre">%H:%M:%S'</span></code>.  This format also
-specifies milliseconds, which are appended to the result of using the above
-format string, with a comma separator.  An example time in this format is
-<code class="docutils literal notranslate"><span class="pre">2003-01-23</span> <span class="pre">00:29:50,411</span></code>.</p>
+package substitutes something which is almost equivalent to specifying the date
+format string <code class="docutils literal notranslate"><span class="pre">'%Y-%m-%d</span> <span class="pre">%H:%M:%S'</span></code>.  This format also specifies milliseconds,
+which are appended to the result of using the above format string, with a comma
+separator.  An example time in this format is <code class="docutils literal notranslate"><span class="pre">2003-01-23</span> <span class="pre">00:29:50,411</span></code>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">class</span></code> entry is optional.  It indicates the name of the formatter's class
 (as a dotted module and class name.)  This option is useful for instantiating a
 <a class="reference internal" href="logging.html#logging.Formatter" title="logging.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a> subclass.  Subclasses of
@@ -915,7 +914,7 @@ multiple users with no mutual trust run code on the same machine; see the
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 09, 2018.
+    Last updated on 6月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

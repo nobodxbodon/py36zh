@@ -1189,9 +1189,9 @@ evaluated and its value is returned.</p>
 <strong id="grammar-token-lambda_expr_nocond">lambda_expr_nocond</strong> ::=  &quot;lambda&quot; [<a class="reference internal" href="compound_stmts.html#grammar-token-parameter_list"><code class="xref docutils literal notranslate"><span class="pre">parameter_list</span></code></a>]: <a class="reference internal" href="#grammar-token-expression_nocond"><code class="xref docutils literal notranslate"><span class="pre">expression_nocond</span></code></a>
 </pre>
 <p>Lambda expressions (sometimes called lambda forms) are used to create anonymous
-functions. The expression <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">arguments:</span> <span class="pre">expression</span></code> yields a function
+functions. The expression <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">parameters:</span> <span class="pre">expression</span></code> yields a function
 object.  The unnamed object behaves like a function object defined with:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def &lt;lambda&gt;(arguments):
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def &lt;lambda&gt;(parameters):
     return expression
 </pre></div>
 </div>
@@ -1523,7 +1523,7 @@ bitwise unary operator on its right, that is, <code class="docutils literal notr
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 5月 09, 2018.
+    Last updated on 6月 03, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

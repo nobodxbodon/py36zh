@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>4. More Control Flow Tools &#8212; Python 3.6.5 文档</title>
+    <title>4. More Control Flow Tools &#8212; Python 3.6.6rc1 文档</title>
     <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.6.5 文档 中搜索"
+          title="在 Python 3.6.6rc1 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -53,7 +53,7 @@
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -89,14 +89,14 @@ control flow statements known from other languages, with some twists.</p>
 <span id="tut-if"></span><h2>4.1. <a class="reference internal" href="../reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">if</span></code></a> Statements<a class="headerlink" href="#if-statements" title="永久链接至标题">¶</a></h2>
 <p>Perhaps the most well-known statement type is the <a class="reference internal" href="../reference/compound_stmts.html#if"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">if</span></code></a> statement.  For
 example:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入整数: &quot;</span><span class="p">))</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">数</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入整数: &quot;</span><span class="p">))</span>
 <span class="go">请输入整数: 42</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">数</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">数</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;负数置为零&#39;</span><span class="p">)</span>
-<span class="gp">... </span><span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">数</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;零&#39;</span><span class="p">)</span>
-<span class="gp">... </span><span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">数</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;一&#39;</span><span class="p">)</span>
 <span class="gp">... </span><span class="k">else</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;更大&#39;</span><span class="p">)</span>
@@ -120,8 +120,8 @@ iterates over the items of any sequence (a list or a string), in the order that
 they appear in the sequence.  For example (no pun intended):</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># 丈量字符串:</span>
 <span class="gp">... </span><span class="n">词表</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;猫&#39;</span><span class="p">,</span> <span class="s1">&#39;窗户&#39;</span><span class="p">,</span> <span class="s1">&#39;丢出窗户&#39;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">词表</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">词</span> <span class="ow">in</span> <span class="n">词表</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">词</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">词</span><span class="p">))</span>
 <span class="gp">...</span>
 <span class="go">猫 1</span>
 <span class="go">窗户 2</span>
@@ -132,9 +132,9 @@ they appear in the sequence.  For example (no pun intended):</p>
 (for example to duplicate selected items), it is recommended that you first
 make a copy.  Iterating over a sequence does not implicitly make a copy.  The
 slice notation makes this especially convenient:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">词表</span><span class="p">[:]:</span>  <span class="c1"># 遍历截取了整个列表的拷贝.</span>
-<span class="gp">... </span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-<span class="gp">... </span>        <span class="n">词表</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">词</span> <span class="ow">in</span> <span class="n">词表</span><span class="p">[:]:</span>  <span class="c1"># 遍历截取了整个列表的拷贝.</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">词</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">词表</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">词</span><span class="p">)</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">词表</span>
 <span class="go">[&#39;丢出窗户&#39;, &#39;猫&#39;, &#39;窗户&#39;, &#39;丢出窗户&#39;]</span>
@@ -807,7 +807,7 @@ callee makes to it (items inserted into a list).</td></tr>
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -835,7 +835,7 @@ callee makes to it (items inserted into a list).</td></tr>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 03, 2018.
+    Last updated on 6月 17, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>19.2. json --- JSON encoder and decoder &#8212; Python 3.6.5 文档</title>
+    <title>19.2. json --- JSON encoder and decoder &#8212; Python 3.6.6rc1 文档</title>
     <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.6.5 文档 中搜索"
+          title="在 Python 3.6.6rc1 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -53,7 +53,7 @@
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -269,9 +269,9 @@ keys.</p>
 <dl class="function">
 <dt id="json.load">
 <code class="descclassname">json.</code><code class="descname">load</code><span class="sig-paren">(</span><em>fp</em>, <em>*</em>, <em>cls=None</em>, <em>object_hook=None</em>, <em>parse_float=None</em>, <em>parse_int=None</em>, <em>parse_constant=None</em>, <em>object_pairs_hook=None</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#json.load" title="永久链接至目标">¶</a></dt>
-<dd><p>Deserialize <em>fp</em> (a <code class="docutils literal notranslate"><span class="pre">.read()</span></code>-supporting <a class="reference internal" href="../glossary.html#term-file-like-object"><span class="xref std std-term">file-like object</span></a>
-containing a JSON document) to a Python object using this <a class="reference internal" href="#json-to-py-table"><span class="std std-ref">conversion
-table</span></a>.</p>
+<dd><p>Deserialize <em>fp</em> (a <code class="docutils literal notranslate"><span class="pre">.read()</span></code>-supporting <a class="reference internal" href="../glossary.html#term-text-file"><span class="xref std std-term">text file</span></a> or
+<a class="reference internal" href="../glossary.html#term-binary-file"><span class="xref std std-term">binary file</span></a> containing a JSON document) to a Python object using
+this <a class="reference internal" href="#json-to-py-table"><span class="std std-ref">conversion table</span></a>.</p>
 <p><em>object_hook</em> is an optional function that will be called with the result of
 any object literal decoded (a <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>).  The return value of
 <em>object_hook</em> will be used instead of the <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.  This feature can be used
@@ -309,6 +309,10 @@ will be passed to the constructor of the class.</p>
 <a class="reference internal" href="#json.JSONDecodeError" title="json.JSONDecodeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">JSONDecodeError</span></code></a> will be raised.</p>
 <div class="versionchanged">
 <p><span class="versionmodified">在 3.6 版更改: </span>All optional parameters are now <a class="reference internal" href="../glossary.html#keyword-only-parameter"><span class="std std-ref">keyword-only</span></a>.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.6 版更改: </span><em>fp</em> can now be a <a class="reference internal" href="../glossary.html#term-binary-file"><span class="xref std std-term">binary file</span></a>. The input encoding should be
+UTF-8, UTF-16 or UTF-32.</p>
 </div>
 </dd></dl>
 
@@ -859,7 +863,7 @@ U+2029 (PARAGRAPH SEPARATOR) characters in strings, whereas JavaScript
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -888,7 +892,7 @@ U+2029 (PARAGRAPH SEPARATOR) characters in strings, whereas JavaScript
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 03, 2018.
+    Last updated on 6月 17, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

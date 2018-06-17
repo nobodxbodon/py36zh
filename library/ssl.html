@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>18.2. ssl --- TLS/SSL wrapper for socket objects &#8212; Python 3.6.5 文档</title>
+    <title>18.2. ssl --- TLS/SSL wrapper for socket objects &#8212; Python 3.6.6rc1 文档</title>
     <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.6.5 文档 中搜索"
+          title="在 Python 3.6.6rc1 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -53,7 +53,7 @@
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -116,6 +116,9 @@ retrieves the cipher being used for the secure connection.</p>
 <p>For more sophisticated applications, the <a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">ssl.SSLContext</span></code></a> class
 helps manage settings and certificates, which can then be inherited
 by SSL sockets created through the <a class="reference internal" href="#ssl.SSLContext.wrap_socket" title="ssl.SSLContext.wrap_socket"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.wrap_socket()</span></code></a> method.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.5.3 版更改: </span>Updated to support linking with OpenSSL 1.1.0</p>
+</div>
 <div class="versionchanged">
 <p><span class="versionmodified">在 3.6 版更改: </span>OpenSSL 0.9.8, 1.0.0 and 1.0.1 are deprecated and no longer supported.
 In the future the ssl module will require at least OpenSSL 1.0.2 or
@@ -695,10 +698,12 @@ PKCS#7 ASN.1 data.</p>
 <dt id="ssl.CERT_NONE">
 <code class="descclassname">ssl.</code><code class="descname">CERT_NONE</code><a class="headerlink" href="#ssl.CERT_NONE" title="永久链接至目标">¶</a></dt>
 <dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a>, or the <code class="docutils literal notranslate"><span class="pre">cert_reqs</span></code>
-parameter to <a class="reference internal" href="#ssl.wrap_socket" title="ssl.wrap_socket"><code class="xref py py-func docutils literal notranslate"><span class="pre">wrap_socket()</span></code></a>.  In this mode (the default), no
-certificates will be required from the other side of the socket connection.
-If a certificate is received from the other end, no attempt to validate it
-is made.</p>
+parameter to <a class="reference internal" href="#ssl.wrap_socket" title="ssl.wrap_socket"><code class="xref py py-func docutils literal notranslate"><span class="pre">wrap_socket()</span></code></a>.  Except for <a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-const docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a>,
+it is the default mode.  With client-side sockets, just about any
+cert is accepted.  Validation errors, such as untrusted or expired cert,
+are ignored and do not abort the TLS/SSL handshake.</p>
+<p>In server mode, no certificate is requested from the client, so the client
+does not send any for client cert authentication.</p>
 <p>See the discussion of <a class="reference internal" href="#ssl-security"><span class="std std-ref">Security considerations</span></a> below.</p>
 </dd></dl>
 
@@ -706,10 +711,14 @@ is made.</p>
 <dt id="ssl.CERT_OPTIONAL">
 <code class="descclassname">ssl.</code><code class="descname">CERT_OPTIONAL</code><a class="headerlink" href="#ssl.CERT_OPTIONAL" title="永久链接至目标">¶</a></dt>
 <dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a>, or the <code class="docutils literal notranslate"><span class="pre">cert_reqs</span></code>
-parameter to <a class="reference internal" href="#ssl.wrap_socket" title="ssl.wrap_socket"><code class="xref py py-func docutils literal notranslate"><span class="pre">wrap_socket()</span></code></a>.  In this mode no certificates will be
-required from the other side of the socket connection; but if they
-are provided, validation will be attempted and an <a class="reference internal" href="#ssl.SSLError" title="ssl.SSLError"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLError</span></code></a>
-will be raised on failure.</p>
+parameter to <a class="reference internal" href="#ssl.wrap_socket" title="ssl.wrap_socket"><code class="xref py py-func docutils literal notranslate"><span class="pre">wrap_socket()</span></code></a>.  In client mode, <a class="reference internal" href="#ssl.CERT_OPTIONAL" title="ssl.CERT_OPTIONAL"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_OPTIONAL</span></code></a>
+has the same meaning as <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a>. It is recommended to
+use <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> for client-side sockets instead.</p>
+<p>In server mode, a client certificate request is sent to the client.  The
+client may either ignore the request or send a certificate in order
+perform TLS client cert authentication.  If the client chooses to send
+a certificate, it is verified.  Any verification error immediately aborts
+the TLS handshake.</p>
 <p>Use of this setting requires a valid set of CA certificates to
 be passed, either to <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a> or as a
 value of the <code class="docutils literal notranslate"><span class="pre">ca_certs</span></code> parameter to <a class="reference internal" href="#ssl.wrap_socket" title="ssl.wrap_socket"><code class="xref py py-func docutils literal notranslate"><span class="pre">wrap_socket()</span></code></a>.</p>
@@ -721,7 +730,15 @@ value of the <code class="docutils literal notranslate"><span class="pre">ca_cer
 <dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a>, or the <code class="docutils literal notranslate"><span class="pre">cert_reqs</span></code>
 parameter to <a class="reference internal" href="#ssl.wrap_socket" title="ssl.wrap_socket"><code class="xref py py-func docutils literal notranslate"><span class="pre">wrap_socket()</span></code></a>.  In this mode, certificates are
 required from the other side of the socket connection; an <a class="reference internal" href="#ssl.SSLError" title="ssl.SSLError"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLError</span></code></a>
-will be raised if no certificate is provided, or if its validation fails.</p>
+will be raised if no certificate is provided, or if its validation fails.
+This mode is <strong>not</strong> sufficient to verify a certificate in client mode as
+it does not match hostnames.  <a class="reference internal" href="#ssl.SSLContext.check_hostname" title="ssl.SSLContext.check_hostname"><code class="xref py py-attr docutils literal notranslate"><span class="pre">check_hostname</span></code></a> must be
+enabled as well to verify the authenticity of a cert.
+<a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-const docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a> uses <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> and
+enables <a class="reference internal" href="#ssl.SSLContext.check_hostname" title="ssl.SSLContext.check_hostname"><code class="xref py py-attr docutils literal notranslate"><span class="pre">check_hostname</span></code></a> by default.</p>
+<p>With server socket, this mode provides mandatory TLS client cert
+authentication.  A client certificate request is sent to the client and
+the client must provide a valid and trusted certificate.</p>
 <p>Use of this setting requires a valid set of CA certificates to
 be passed, either to <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a> or as a
 value of the <code class="docutils literal notranslate"><span class="pre">ca_certs</span></code> parameter to <a class="reference internal" href="#ssl.wrap_socket" title="ssl.wrap_socket"><code class="xref py py-func docutils literal notranslate"><span class="pre">wrap_socket()</span></code></a>.</p>
@@ -2610,14 +2627,6 @@ enabled.</p>
 <p>In server mode, if you want to authenticate your clients using the SSL layer
 (rather than using a higher-level authentication mechanism), you'll also have
 to specify <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> and similarly check the client certificate.</p>
-<blockquote>
-<div><div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">In client mode, <a class="reference internal" href="#ssl.CERT_OPTIONAL" title="ssl.CERT_OPTIONAL"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_OPTIONAL</span></code></a> and <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> are
-equivalent unless anonymous ciphers are enabled (they are disabled
-by default).</p>
-</div>
-</div></blockquote>
 </div>
 <div class="section" id="protocol-versions">
 <h4>18.2.9.2.2. Protocol versions<a class="headerlink" href="#protocol-versions" title="永久链接至标题">¶</a></h4>
@@ -2793,7 +2802,7 @@ with LibreSSL.</p>
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -2822,7 +2831,7 @@ with LibreSSL.</p>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 03, 2018.
+    Last updated on 6月 17, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

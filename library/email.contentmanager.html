@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>19.1.7. email.contentmanager: Managing MIME Content &#8212; Python 3.6.5 文档</title>
+    <title>19.1.7. email.contentmanager: Managing MIME Content &#8212; Python 3.6.6rc1 文档</title>
     <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.6.5 文档 中搜索"
+          title="在 Python 3.6.6rc1 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -53,7 +53,7 @@
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -204,8 +204,6 @@ decoding the payload to unicode.  The default error handler is
 <code class="descclassname">email.contentmanager.</code><code class="descname">set_content</code><span class="sig-paren">(</span><em>msg</em>, <em>&lt;'bytes'&gt;</em>, <em>maintype</em>, <em>subtype</em>, <em>cte=&quot;base64&quot;</em>, <em>disposition=None</em>, <em>filename=None</em>, <em>cid=None</em>, <em>params=None</em>, <em>headers=None</em><span class="sig-paren">)</span></dt>
 <dt>
 <code class="descclassname">email.contentmanager.</code><code class="descname">set_content</code><span class="sig-paren">(</span><em>msg</em>, <em>&lt;'EmailMessage'&gt;</em>, <em>cte=None</em>, <em>disposition=None</em>, <em>filename=None</em>, <em>cid=None</em>, <em>params=None</em>, <em>headers=None</em><span class="sig-paren">)</span></dt>
-<dt>
-<code class="descclassname">email.contentmanager.</code><code class="descname">set_content</code><span class="sig-paren">(</span><em>msg</em>, <em>&lt;'list'&gt;</em>, <em>subtype='mixed'</em>, <em>disposition=None</em>, <em>filename=None</em>, <em>cid=None</em>, <em>params=None</em>, <em>headers=None</em><span class="sig-paren">)</span></dt>
 <dd><p>Add headers and payload to <em>msg</em>:</p>
 <p>Add a <em class="mailheader">Content-Type</em> header with a <code class="docutils literal notranslate"><span class="pre">maintype/subtype</span></code>
 value.</p>
@@ -220,12 +218,6 @@ to <code class="docutils literal notranslate"><span class="pre">message</span></
 specified or <code class="docutils literal notranslate"><span class="pre">rfc822</span></code> if it is not.  If <em>subtype</em> is
 <code class="docutils literal notranslate"><span class="pre">partial</span></code>, raise an error (<code class="docutils literal notranslate"><span class="pre">bytes</span></code> objects must be used to
 construct <code class="docutils literal notranslate"><span class="pre">message/partial</span></code> parts).</li>
-<li>For <em>&lt;'list'&gt;</em>, which should be a list of
-<a class="reference internal" href="email.message.html#email.message.EmailMessage" title="email.message.EmailMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">EmailMessage</span></code></a> objects, set the <code class="docutils literal notranslate"><span class="pre">maintype</span></code>
-to <code class="docutils literal notranslate"><span class="pre">multipart</span></code>, and the <code class="docutils literal notranslate"><span class="pre">subtype</span></code> to <em>subtype</em> if it is
-specified, and <code class="docutils literal notranslate"><span class="pre">mixed</span></code> if it is not.  If the message parts in
-the <em>&lt;'list'&gt;</em> have <em class="mailheader">MIME-Version</em> headers, remove
-them.</li>
 </ul>
 </div></blockquote>
 <p>If <em>charset</em> is provided (which is valid only for <code class="docutils literal notranslate"><span class="pre">str</span></code>), encode the
@@ -344,7 +336,7 @@ headers to <em>msg</em>.</p>
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -374,7 +366,7 @@ headers to <em>msg</em>.</p>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 03, 2018.
+    Last updated on 6月 17, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

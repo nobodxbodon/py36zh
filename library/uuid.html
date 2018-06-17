@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>21.20. uuid --- UUID objects according to RFC 4122 &#8212; Python 3.6.5 文档</title>
+    <title>21.20. uuid --- UUID objects according to RFC 4122 &#8212; Python 3.6.6rc1 文档</title>
     <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.6.5 文档 中搜索"
+          title="在 Python 3.6.6rc1 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -53,7 +53,7 @@
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -97,12 +97,13 @@ random UUID.</p>
 <dt id="uuid.UUID">
 <em class="property">class </em><code class="descclassname">uuid.</code><code class="descname">UUID</code><span class="sig-paren">(</span><em>hex=None</em>, <em>bytes=None</em>, <em>bytes_le=None</em>, <em>fields=None</em>, <em>int=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#uuid.UUID" title="永久链接至目标">¶</a></dt>
 <dd><p>Create a UUID from either a string of 32 hexadecimal digits, a string of 16
-bytes as the <em>bytes</em> argument, a string of 16 bytes in little-endian order as
-the <em>bytes_le</em> argument, a tuple of six integers (32-bit <em>time_low</em>, 16-bit
-<em>time_mid</em>, 16-bit <em>time_hi_version</em>, 8-bit <em>clock_seq_hi_variant</em>, 8-bit
-<em>clock_seq_low</em>, 48-bit <em>node</em>) as the <em>fields</em> argument, or a single 128-bit
-integer as the <em>int</em> argument.  When a string of hex digits is given, curly
-braces, hyphens, and a URN prefix are all optional.  For example, these
+bytes in big-endian order as the <em>bytes</em> argument, a string of 16 bytes in
+little-endian order as the <em>bytes_le</em> argument, a tuple of six integers
+(32-bit <em>time_low</em>, 16-bit <em>time_mid</em>, 16-bit <em>time_hi_version</em>,
+8-bit <em>clock_seq_hi_variant</em>, 8-bit <em>clock_seq_low</em>, 48-bit <em>node</em>) as the
+<em>fields</em> argument, or a single 128-bit integer as the <em>int</em> argument.
+When a string of hex digits is given, curly braces, hyphens,
+and a URN prefix are all optional.  For example, these
 expressions all yield the same UUID:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">UUID</span><span class="p">(</span><span class="s1">&#39;{12345678-1234-5678-1234-567812345678}&#39;</span><span class="p">)</span>
 <span class="n">UUID</span><span class="p">(</span><span class="s1">&#39;12345678123456781234567812345678&#39;</span><span class="p">)</span>
@@ -416,7 +417,7 @@ internal format of UUIDs, and methods of generating UUIDs.</dd>
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -445,7 +446,7 @@ internal format of UUIDs, and methods of generating UUIDs.</dd>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 03, 2018.
+    Last updated on 6月 17, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

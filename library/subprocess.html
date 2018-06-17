@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>17.5. subprocess --- Subprocess management &#8212; Python 3.6.5 文档</title>
+    <title>17.5. subprocess --- Subprocess management &#8212; Python 3.6.6rc1 文档</title>
     <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.6.5 文档 中搜索"
+          title="在 Python 3.6.6rc1 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -53,7 +53,7 @@
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -108,7 +108,7 @@ underlying <a class="reference internal" href="#subprocess.Popen" title="subproc
 compatibility with older versions, see the <a class="reference internal" href="#call-function-trio"><span class="std std-ref">Older high-level API</span></a> section.</p>
 <dl class="function">
 <dt id="subprocess.run">
-<code class="descclassname">subprocess.</code><code class="descname">run</code><span class="sig-paren">(</span><em>args</em>, <em>*</em>, <em>stdin=None</em>, <em>input=None</em>, <em>stdout=None</em>, <em>stderr=None</em>, <em>shell=False</em>, <em>cwd=None</em>, <em>timeout=None</em>, <em>check=False</em>, <em>encoding=None</em>, <em>errors=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.run" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">subprocess.</code><code class="descname">run</code><span class="sig-paren">(</span><em>args</em>, <em>*</em>, <em>stdin=None</em>, <em>input=None</em>, <em>stdout=None</em>, <em>stderr=None</em>, <em>shell=False</em>, <em>cwd=None</em>, <em>timeout=None</em>, <em>check=False</em>, <em>encoding=None</em>, <em>errors=None</em>, <em>env=None</em><span class="sig-paren">)</span><a class="headerlink" href="#subprocess.run" title="永久链接至目标">¶</a></dt>
 <dd><p>Run the command described by <em>args</em>.  Wait for command to complete, then
 return a <a class="reference internal" href="#subprocess.CompletedProcess" title="subprocess.CompletedProcess"><code class="xref py py-class docutils literal notranslate"><span class="pre">CompletedProcess</span></code></a> instance.</p>
 <p>The arguments shown above are merely the most common ones, described below
@@ -136,6 +136,10 @@ were captured.</p>
 file objects for stdin, stdout and stderr are opened in text mode using the
 specified <em>encoding</em> and <em>errors</em> or the <a class="reference internal" href="io.html#io.TextIOWrapper" title="io.TextIOWrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOWrapper</span></code></a> default.
 Otherwise, file objects are opened in binary mode.</p>
+<p>If <em>env</em> is not <code class="docutils literal notranslate"><span class="pre">None</span></code>, it must be a mapping that defines the environment
+variables for the new process; these are used instead of the default
+behavior of inheriting the current process' environment. It is passed directly
+to <a class="reference internal" href="#subprocess.Popen" title="subprocess.Popen"><code class="xref py py-class docutils literal notranslate"><span class="pre">Popen</span></code></a>.</p>
 <p>Examples:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;-l&quot;</span><span class="p">])</span>  <span class="c1"># doesn&#39;t capture output</span>
 <span class="go">CompletedProcess(args=[&#39;ls&#39;, &#39;-l&#39;], returncode=0)</span>
@@ -1382,7 +1386,7 @@ described in rule 3.</li>
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -1411,7 +1415,7 @@ described in rule 3.</li>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 03, 2018.
+    Last updated on 6月 17, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

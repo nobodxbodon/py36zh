@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>6.1. string --- Common string operations &#8212; Python 3.6.5 文档</title>
+    <title>6.1. string --- Common string operations &#8212; Python 3.6.6rc1 文档</title>
     <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.6.5 文档 中搜索"
+          title="在 Python 3.6.6rc1 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -53,7 +53,7 @@
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -315,8 +315,11 @@ attribute expressions. An expression of the form <code class="docutils literal n
 attribute using <a class="reference internal" href="functions.html#getattr" title="getattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">getattr()</span></code></a>, while an expression of the form <code class="docutils literal notranslate"><span class="pre">'[index]'</span></code>
 does an index lookup using <a class="reference internal" href="../reference/datamodel.html#object.__getitem__" title="object.__getitem__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__getitem__()</span></code></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified">在 3.1 版更改: </span>The positional argument specifiers can be omitted, so <code class="docutils literal notranslate"><span class="pre">'{}</span> <span class="pre">{}'</span></code> is
-equivalent to <code class="docutils literal notranslate"><span class="pre">'{0}</span> <span class="pre">{1}'</span></code>.</p>
+<p><span class="versionmodified">在 3.1 版更改: </span>The positional argument specifiers can be omitted for <a class="reference internal" href="stdtypes.html#str.format" title="str.format"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format()</span></code></a>,
+so <code class="docutils literal notranslate"><span class="pre">'{}</span> <span class="pre">{}'.format(a,</span> <span class="pre">b)</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">'{0}</span> <span class="pre">{1}'.format(a,</span> <span class="pre">b)</span></code>.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.4 版更改: </span>The positional argument specifiers can be omitted for <a class="reference internal" href="#string.Formatter" title="string.Formatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">Formatter</span></code></a>.</p>
 </div>
 <p>Some simple format string examples:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;First, thou shalt count to </span><span class="si">{0}</span><span class="s2">&quot;</span>  <span class="c1"># References first positional argument</span>
@@ -983,7 +986,7 @@ split and join the words.</p>
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -1012,7 +1015,7 @@ split and join the words.</p>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 03, 2018.
+    Last updated on 6月 17, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

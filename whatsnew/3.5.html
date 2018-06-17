@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>What&#39;s New In Python 3.5 &#8212; Python 3.6.5 文档</title>
+    <title>What&#39;s New In Python 3.5 &#8212; Python 3.6.6rc1 文档</title>
     <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.6.5 文档 中搜索"
+          title="在 Python 3.6.6rc1 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -53,7 +53,7 @@
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -2158,6 +2158,35 @@ new types, structures and functions.</li>
 </ul>
 </div>
 </div>
+<div class="section" id="notable-changes-in-python-3-5-4">
+<h2>Notable changes in Python 3.5.4<a class="headerlink" href="#notable-changes-in-python-3-5-4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="new-make-regen-all-build-target">
+<h3>New <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">regen-all</span></code> build target<a class="headerlink" href="#new-make-regen-all-build-target" title="永久链接至标题">¶</a></h3>
+<p>To simplify cross-compilation, and to ensure that CPython can reliably be
+compiled without requiring an existing version of Python to already be
+available, the autotools-based build system no longer attempts to implicitly
+recompile generated files based on file modification times.</p>
+<p>Instead, a new <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">regen-all</span></code> command has been added to force regeneration
+of these files when desired (e.g. after an initial version of Python has
+already been built based on the pregenerated versions).</p>
+<p>More selective regeneration targets are also defined - see
+<a class="reference external" href="https://github.com/python/cpython/tree/3.6/Makefile.pre.in">Makefile.pre.in</a> for details.</p>
+<p>(Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue23404">bpo-23404</a>.)</p>
+<div class="versionadded">
+<p><span class="versionmodified">3.5.4 新版功能.</span></p>
+</div>
+</div>
+<div class="section" id="removal-of-make-touch-build-target">
+<h3>Removal of <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">touch</span></code> build target<a class="headerlink" href="#removal-of-make-touch-build-target" title="永久链接至标题">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">touch</span></code> build target previously used to request implicit regeneration
+of generated files by updating their modification times has been removed.</p>
+<p>It has been replaced by the new <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">regen-all</span></code> target.</p>
+<p>(Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue23404">bpo-23404</a>.)</p>
+<div class="versionchanged">
+<p><span class="versionmodified">在 3.5.4 版更改.</span></p>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -2294,6 +2323,11 @@ new types, structures and functions.</li>
 <li><a class="reference internal" href="#changes-in-the-c-api">Changes in the C API</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#notable-changes-in-python-3-5-4">Notable changes in Python 3.5.4</a><ul>
+<li><a class="reference internal" href="#new-make-regen-all-build-target">New <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">regen-all</span></code> build target</a></li>
+<li><a class="reference internal" href="#removal-of-make-touch-build-target">Removal of <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">touch</span></code> build target</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -2339,7 +2373,7 @@ new types, structures and functions.</li>
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -2367,7 +2401,7 @@ new types, structures and functions.</li>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 03, 2018.
+    Last updated on 6月 17, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

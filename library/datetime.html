@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>8.1. datetime --- Basic date and time types &#8212; Python 3.6.5 文档</title>
+    <title>8.1. datetime --- Basic date and time types &#8212; Python 3.6.6rc1 文档</title>
     <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/sidebar.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.6.5 文档 中搜索"
+          title="在 Python 3.6.6rc1 文档 中搜索"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -53,7 +53,7 @@
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -1143,8 +1143,7 @@ adjusting the date and time data so the result is the same UTC time as
 <em>self</em>, but in <em>tz</em>'s local time.</p>
 <p>If provided, <em>tz</em> must be an instance of a <a class="reference internal" href="#datetime.tzinfo" title="datetime.tzinfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">tzinfo</span></code></a> subclass, and its
 <a class="reference internal" href="#datetime.datetime.utcoffset" title="datetime.datetime.utcoffset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">utcoffset()</span></code></a> and <a class="reference internal" href="#datetime.datetime.dst" title="datetime.datetime.dst"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dst()</span></code></a> methods must not return <code class="docutils literal notranslate"><span class="pre">None</span></code>.  If <em>self</em>
-is naive (<code class="docutils literal notranslate"><span class="pre">self.tzinfo</span> <span class="pre">is</span> <span class="pre">None</span></code>), it is presumed to represent time in the
-system timezone.</p>
+is naive, it is presumed to represent time in the system timezone.</p>
 <p>If called without arguments (or with <code class="docutils literal notranslate"><span class="pre">tz=None</span></code>) the system local
 timezone is assumed for the target timezone.  The <code class="docutils literal notranslate"><span class="pre">.tzinfo</span></code> attribute of the converted
 datetime instance will be set to an instance of <a class="reference internal" href="#datetime.timezone" title="datetime.timezone"><code class="xref py py-class docutils literal notranslate"><span class="pre">timezone</span></code></a>
@@ -2659,7 +2658,7 @@ interchangeable.</p>
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="../index.html">Documentation </a> &#187;
         </li>
 
@@ -2688,7 +2687,7 @@ interchangeable.</p>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 03, 2018.
+    Last updated on 6月 17, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

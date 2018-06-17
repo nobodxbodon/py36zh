@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Glossary &#8212; Python 3.6.5 文档</title>
+    <title>Glossary &#8212; Python 3.6.6rc1 文档</title>
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/sidebar.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.6.5 文档 中搜索"
+          title="在 Python 3.6.6rc1 文档 中搜索"
           href="_static/opensearch.xml"/>
     <link rel="author" title="关于这些文档" href="about.html" />
     <link rel="index" title="索引" href="genindex.html" />
@@ -53,7 +53,7 @@
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="index.html">Documentation </a> &#187;
         </li>
 
@@ -88,8 +88,9 @@
 examples which can be executed interactively in the interpreter.</dd>
 <dt id="term-1"><code class="docutils literal notranslate"><span class="pre">...</span></code></dt>
 <dd>The default Python prompt of the interactive shell when entering code for
-an indented code block or within a pair of matching left and right
-delimiters (parentheses, square brackets or curly braces).</dd>
+an indented code block, when within a pair of matching left and right
+delimiters (parentheses, square brackets, curly braces or triple quotes),
+or after specifying a decorator.</dd>
 <dt id="term-2to3">2to3</dt>
 <dd><p class="first">A tool that tries to convert Python 2.x code to Python 3.x code by
 handling most of the incompatibilities which can be detected by parsing the
@@ -179,7 +180,7 @@ next <a class="reference internal" href="reference/simple_stmts.html#yield"><cod
 location execution state (including local variables and pending
 try-statements).  When the <em>asynchronous generator iterator</em> effectively
 resumes with another awaitable returned by <a class="reference internal" href="reference/datamodel.html#object.__anext__" title="object.__anext__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__anext__()</span></code></a>, it
-picks-up where it left-off.  See <span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0492"><strong>PEP 492</strong></a> and <span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0525"><strong>PEP 525</strong></a>.</p>
+picks up where it left off.  See <span class="target" id="index-4"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0492"><strong>PEP 492</strong></a> and <span class="target" id="index-5"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0525"><strong>PEP 525</strong></a>.</p>
 </dd>
 <dt id="term-asynchronous-iterable">asynchronous iterable</dt>
 <dd>An object, that can be used in an <a class="reference internal" href="reference/compound_stmts.html#async-for"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code></a> statement.
@@ -457,8 +458,8 @@ meaning isn't clear, using the full terms avoids ambiguity.</p>
 <dd><p class="first">An object created by a <a class="reference internal" href="#term-generator"><span class="xref std std-term">generator</span></a> function.</p>
 <p class="last">Each <a class="reference internal" href="reference/simple_stmts.html#yield"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">yield</span></code></a> temporarily suspends processing, remembering the
 location execution state (including local variables and pending
-try-statements).  When the <em>generator iterator</em> resumes, it picks-up where
-it left-off (in contrast to functions which start fresh on every
+try-statements).  When the <em>generator iterator</em> resumes, it picks up where
+it left off (in contrast to functions which start fresh on every
 invocation).</p>
 </dd>
 <dt id="index-20"><span id="term-generator-expression"></span>generator expression</dt>
@@ -634,7 +635,7 @@ This issue can be solved with locks or by using the EAFP approach.</p>
 <dt id="term-list">list(列表)</dt>
 <dd>A built-in Python <a class="reference internal" href="#term-sequence"><span class="xref std std-term">sequence</span></a>.  Despite its name it is more akin
 to an array in other languages than to a linked list since access to
-elements are O(1).</dd>
+elements is O(1).</dd>
 <dt id="term-list-comprehension">list comprehension</dt>
 <dd>A compact way to process all or part of the elements in a sequence and
 return a list with the results.  <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">['{:#04x}'.format(x)</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span>
@@ -1113,7 +1114,7 @@ understanding and using the language.  The listing can be found by typing
         <li><a href="https://www.python.org/">Python</a> &#187;</li>
         <li>
           <span class="language_switcher_placeholder">zh</span>
-          <span class="version_switcher_placeholder">3.6.5</span>
+          <span class="version_switcher_placeholder">3.6.6rc1</span>
           <a href="index.html">Documentation </a> &#187;
         </li>
 
@@ -1140,7 +1141,7 @@ understanding and using the language.  The listing can be found by typing
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 03, 2018.
+    Last updated on 6月 17, 2018.
     <a href="bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

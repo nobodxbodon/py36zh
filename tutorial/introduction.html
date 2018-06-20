@@ -198,18 +198,18 @@ and uses the <code class="docutils literal notranslate"><span class="pre">j</spa
 in several ways.  They can be enclosed in single quotes (<code class="docutils literal notranslate"><span class="pre">'...'</span></code>) or
 double quotes (<code class="docutils literal notranslate"><span class="pre">&quot;...&quot;</span></code>) with the same result <a class="footnote-reference" href="#id4" id="id2">[2]</a>.  <code class="docutils literal notranslate"><span class="pre">\</span></code> can be used
 to escape quotes:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;火腿鸡蛋&#39;</span>  <span class="c1"># 单引号</span>
-<span class="go">&#39;火腿鸡蛋&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;doesn</span><span class="se">\&#39;</span><span class="s1">t&#39;</span>  <span class="c1"># 用\&#39;对单引号转义...</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;spam eggs&#39;</span>  <span class="c1"># single quotes</span>
+<span class="go">&#39;spam eggs&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;doesn</span><span class="se">\&#39;</span><span class="s1">t&#39;</span>  <span class="c1"># use \&#39; to escape the single quote...</span>
 <span class="go">&quot;doesn&#39;t&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;doesn&#39;t&quot;</span>  <span class="c1"># ...或者用双引号</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;doesn&#39;t&quot;</span>  <span class="c1"># ...or use double quotes instead</span>
 <span class="go">&quot;doesn&#39;t&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;&quot;好,&quot; 他说.&#39;</span>
-<span class="go">&#39;&quot;好,&quot; 他说.&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">好,</span><span class="se">\&quot;</span><span class="s2"> 他说.&quot;</span>
-<span class="go">&#39;&quot;好,&quot; 他说.&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;&quot;Isn</span><span class="se">\&#39;</span><span class="s1">t,&quot; 她说.&#39;</span>
-<span class="go">&#39;&quot;Isn\&#39;t,&quot; 她说.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;&quot;Yes,&quot; they said.&#39;</span>
+<span class="go">&#39;&quot;Yes,&quot; they said.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">Yes,</span><span class="se">\&quot;</span><span class="s2"> they said.&quot;</span>
+<span class="go">&#39;&quot;Yes,&quot; they said.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;&quot;Isn</span><span class="se">\&#39;</span><span class="s1">t,&quot; they said.&#39;</span>
+<span class="go">&#39;&quot;Isn\&#39;t,&quot; they said.&#39;</span>
 </pre></div>
 </div>
 <p>In the interactive interpreter, the output string is enclosed in quotes and
@@ -220,14 +220,14 @@ the string contains a single quote and no double quotes, otherwise it is
 enclosed in single quotes.  The <a class="reference internal" href="../library/functions.html#print" title="print"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a> function produces a more
 readable output, by omitting the enclosing quotes and by printing escaped
 and special characters:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;&quot;Isn</span><span class="se">\&#39;</span><span class="s1">t,&quot; 她说.&#39;</span>
-<span class="go">&#39;&quot;Isn\&#39;t,&quot; 她说.&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;Isn</span><span class="se">\&#39;</span><span class="s1">t,&quot; 她说.&#39;</span><span class="p">)</span>
-<span class="go">&quot;Isn&#39;t,&quot; 她说.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;First line.</span><span class="se">\n</span><span class="s1">Second line.&#39;</span>  <span class="c1"># \n 新起一行</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span>  <span class="c1"># 没有 print(), \n 在输出中</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;&quot;Isn</span><span class="se">\&#39;</span><span class="s1">t,&quot; they said.&#39;</span>
+<span class="go">&#39;&quot;Isn\&#39;t,&quot; they said.&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;Isn</span><span class="se">\&#39;</span><span class="s1">t,&quot; they said.&#39;</span><span class="p">)</span>
+<span class="go">&quot;Isn&#39;t,&quot; they said.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;First line.</span><span class="se">\n</span><span class="s1">Second line.&#39;</span>  <span class="c1"># \n means newline</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span>  <span class="c1"># without print(), \n is included in the output</span>
 <span class="go">&#39;First line.\nSecond line.&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># 用 print(), \n 新起一行</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># with print(), \n produces a new line</span>
 <span class="go">First line.</span>
 <span class="go">Second line.</span>
 </pre></div>
@@ -684,7 +684,7 @@ need to escape <code class="docutils literal notranslate"><span class="pre">&quo
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 17, 2018.
+    Last updated on 6月 19, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

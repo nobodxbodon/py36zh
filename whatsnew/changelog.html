@@ -165,6 +165,7 @@ idempotent.</li>
 <div class="section" id="tests">
 <h3>Tests<a class="headerlink" href="#tests" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<li><a class="reference external" href="https://bugs.python.org/issue33746">bpo-33746</a>: Fix test_unittest when run in verbose mode.</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33901">bpo-33901</a>: Fix test_dbm_gnu on macOS with gdbm 1.15: add a larger value to
 make sure that the file size changes.</li>
 </ul>
@@ -172,6 +173,14 @@ make sure that the file size changes.</li>
 <div class="section" id="idle">
 <h3>IDLE<a class="headerlink" href="#idle" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
+<li><a class="reference external" href="https://bugs.python.org/issue33924">bpo-33924</a>: Change mainmenu.menudefs key 'windows' to 'window'. Every other
+menudef key is lowercase version of main menu entry.</li>
+<li><a class="reference external" href="https://bugs.python.org/issue33906">bpo-33906</a>: Rename idlelib.windows as window Match Window on the main menu
+and remove last plural module name.</li>
+<li><a class="reference external" href="https://bugs.python.org/issue33917">bpo-33917</a>: Fix and document idlelib/idle_test/template.py. The revised
+file compiles, runs, and tests OK.  idle_test/README.txt explains how to
+use it to create new IDLE test files.</li>
+<li><a class="reference external" href="https://bugs.python.org/issue33904">bpo-33904</a>: IDLE: In rstrip, rename class RstripExtension as Rstrip</li>
 <li><a class="reference external" href="https://bugs.python.org/issue33907">bpo-33907</a>: For consistency and clarity, rename an IDLE module and classes.
 Module calltips and its class CallTips are now calltip and Calltip. In
 module calltip_w, class CallTip is now CalltipWindow.</li>
@@ -8958,7 +8967,7 @@ Kilburn.</li>
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 19, 2018.
+    Last updated on 6月 20, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

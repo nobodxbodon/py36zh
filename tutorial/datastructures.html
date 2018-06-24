@@ -414,23 +414,23 @@ slicing operations.  They are two examples of <em>sequence</em> data types (see
 types may be added.  There is also another standard sequence data type: the
 <em>tuple</em>.</p>
 <p>A tuple consists of a number of values separated by commas, for instance:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="mi">12345</span><span class="p">,</span> <span class="mi">54321</span><span class="p">,</span> <span class="s1">&#39;你好!&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">元组</span> <span class="o">=</span> <span class="mi">12345</span><span class="p">,</span> <span class="mi">54321</span><span class="p">,</span> <span class="s1">&#39;你好!&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">元组</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="go">12345</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">元组</span>
 <span class="go">(12345, 54321, &#39;你好!&#39;)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># 元组可以嵌套:</span>
-<span class="gp">... </span><span class="n">u</span> <span class="o">=</span> <span class="n">t</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span>
+<span class="gp">... </span><span class="n">嵌套元组</span> <span class="o">=</span> <span class="n">元组</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">嵌套元组</span>
 <span class="go">((12345, 54321, &#39;你好!&#39;), (1, 2, 3, 4, 5))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># 元组不可修改:</span>
-<span class="gp">... </span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">88888</span>
+<span class="gp">... </span><span class="n">元组</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">88888</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
 <span class="gr">TypeError</span>: <span class="n">&#39;tuple&#39; object does not support item assignment</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># 但他们可以包含可修改的对象:</span>
-<span class="gp">... </span><span class="n">v</span> <span class="o">=</span> <span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">v</span>
+<span class="gp">... </span><span class="n">可改元组</span> <span class="o">=</span> <span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">可改元组</span>
 <span class="go">([1, 2, 3], [3, 2, 1])</span>
 </pre></div>
 </div>
@@ -465,7 +465,7 @@ in parentheses). Ugly, but effective.  For example:</p>
 <p>The statement <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">12345,</span> <span class="pre">54321,</span> <span class="pre">'hello!'</span></code> is an example of <em>tuple packing</em>:
 the values <code class="docutils literal notranslate"><span class="pre">12345</span></code>, <code class="docutils literal notranslate"><span class="pre">54321</span></code> and <code class="docutils literal notranslate"><span class="pre">'hello!'</span></code> are packed together in a tuple.
 The reverse operation is also possible:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">t</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">数1</span><span class="p">,</span> <span class="n">数2</span><span class="p">,</span> <span class="n">文本</span> <span class="o">=</span> <span class="n">元组</span>
 </pre></div>
 </div>
 <p>This is called, appropriately enough, <em>sequence unpacking</em> and works for any
@@ -543,23 +543,23 @@ used in the dictionary, in arbitrary order (if you want it sorted, just use
 <code class="docutils literal notranslate"><span class="pre">sorted(d.keys())</span></code> instead). <a class="footnote-reference" href="#id4" id="id2">[2]</a>  To check whether a single key is in the
 dictionary, use the <a class="reference internal" href="../reference/expressions.html#in"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">in</span></code></a> keyword.</p>
 <p>Here is a small example using a dictionary:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">电话簿</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;jack&#39;</span><span class="p">:</span> <span class="mi">4098</span><span class="p">,</span> <span class="s1">&#39;sape&#39;</span><span class="p">:</span> <span class="mi">4139</span><span class="p">}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">电话簿</span><span class="p">[</span><span class="s1">&#39;guido&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4127</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">电话簿</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;张三&#39;</span><span class="p">:</span> <span class="mi">1234</span><span class="p">,</span> <span class="s1">&#39;李四&#39;</span><span class="p">:</span> <span class="mi">4321</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">电话簿</span><span class="p">[</span><span class="s1">&#39;王五&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5678</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">电话簿</span>
-<span class="go">{&#39;sape&#39;: 4139, &#39;guido&#39;: 4127, &#39;jack&#39;: 4098}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">电话簿</span><span class="p">[</span><span class="s1">&#39;jack&#39;</span><span class="p">]</span>
-<span class="go">4098</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">电话簿</span><span class="p">[</span><span class="s1">&#39;sape&#39;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">电话簿</span><span class="p">[</span><span class="s1">&#39;irv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4127</span>
+<span class="go">{&#39;张三&#39;: 1234, &#39;李四&#39;: 4321, &#39;王五&#39;: 5678}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">电话簿</span><span class="p">[</span><span class="s1">&#39;张三&#39;</span><span class="p">]</span>
+<span class="go">1234</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">电话簿</span><span class="p">[</span><span class="s1">&#39;李四&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">电话簿</span><span class="p">[</span><span class="s1">&#39;小红&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5678</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">电话簿</span>
-<span class="go">{&#39;guido&#39;: 4127, &#39;irv&#39;: 4127, &#39;jack&#39;: 4098}</span>
+<span class="go">{&#39;张三&#39;: 1234, &#39;王五&#39;: 5678, &#39;小红&#39;: 5678}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">电话簿</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-<span class="go">[&#39;irv&#39;, &#39;guido&#39;, &#39;jack&#39;]</span>
+<span class="go">[&#39;张三&#39;, &#39;王五&#39;, &#39;小红&#39;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sorted</span><span class="p">(</span><span class="n">电话簿</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-<span class="go">[&#39;guido&#39;, &#39;irv&#39;, &#39;jack&#39;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;guido&#39;</span> <span class="ow">in</span> <span class="n">电话簿</span>
+<span class="go">[&#39;小红&#39;, &#39;张三&#39;, &#39;王五&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;王五&#39;</span> <span class="ow">in</span> <span class="n">电话簿</span>
 <span class="go">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;jack&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">电话簿</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;张三&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">电话簿</span>
 <span class="go">False</span>
 </pre></div>
 </div>
@@ -577,8 +577,8 @@ arbitrary key and value expressions:</p>
 </div>
 <p>When the keys are simple strings, it is sometimes easier to specify pairs using
 keyword arguments:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">(</span><span class="n">sape</span><span class="o">=</span><span class="mi">4139</span><span class="p">,</span> <span class="n">guido</span><span class="o">=</span><span class="mi">4127</span><span class="p">,</span> <span class="n">jack</span><span class="o">=</span><span class="mi">4098</span><span class="p">)</span>
-<span class="go">{&#39;sape&#39;: 4139, &#39;jack&#39;: 4098, &#39;guido&#39;: 4127}</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">dict</span><span class="p">(</span><span class="n">李四</span><span class="o">=</span><span class="mi">4321</span><span class="p">,</span> <span class="n">王五</span><span class="o">=</span><span class="mi">5678</span><span class="p">,</span> <span class="n">张三</span><span class="o">=</span><span class="mi">1234</span><span class="p">)</span>
+<span class="go">{&#39;李四&#39;: 4321, &#39;王五&#39;: 5678, &#39;张三&#39;: 1234}</span>
 </pre></div>
 </div>
 </div>
@@ -586,34 +586,35 @@ keyword arguments:</p>
 <span id="tut-loopidioms"></span><h2>5.6. Looping Techniques<a class="headerlink" href="#looping-techniques" title="永久链接至标题">¶</a></h2>
 <p>When looping through dictionaries, the key and corresponding value can be
 retrieved at the same time using the <code class="xref py py-meth docutils literal notranslate"><span class="pre">items()</span></code> method.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">骑士</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;加拉哈德&#39;</span><span class="p">:</span> <span class="s1">&#39;这纯洁的&#39;</span><span class="p">,</span> <span class="s1">&#39;罗宾&#39;</span><span class="p">:</span> <span class="s1">&#39;这勇士&#39;</span><span class="p">}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">骑士</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">人物</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;唐僧&#39;</span><span class="p">:</span> <span class="s1">&#39;人&#39;</span><span class="p">,</span> <span class="s1">&#39;孙悟空&#39;</span><span class="p">:</span> <span class="s1">&#39;猴&#39;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">键</span><span class="p">,</span> <span class="n">值</span> <span class="ow">in</span> <span class="n">人物</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">键</span><span class="p">,</span> <span class="n">值</span><span class="p">)</span>
 <span class="gp">...</span>
-<span class="go">加拉哈德 这纯洁的</span>
-<span class="go">罗宾 这勇士</span>
+<span class="go">唐僧 人</span>
+<span class="go">孙悟空 猴</span>
 </pre></div>
 </div>
 <p>When looping through a sequence, the position index and corresponding value can
 be retrieved at the same time using the <a class="reference internal" href="../library/functions.html#enumerate" title="enumerate"><code class="xref py py-func docutils literal notranslate"><span class="pre">enumerate()</span></code></a> function.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">索引</span><span class="p">,</span> <span class="n">值</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;石头&#39;</span><span class="p">,</span> <span class="s1">&#39;剪刀&#39;</span><span class="p">,</span> <span class="s1">&#39;布&#39;</span><span class="p">]):</span>
-<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">所有</span><span class="p">,</span> <span class="n">值</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">索引</span><span class="p">,</span> <span class="n">值</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s1">&#39;唐僧&#39;</span><span class="p">,</span> <span class="s1">&#39;孙悟空&#39;</span><span class="p">,</span> <span class="s1">&#39;猪八戒&#39;</span><span class="p">,</span> <span class="s1">&#39;沙僧&#39;</span><span class="p">]):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">索引</span><span class="p">,</span> <span class="n">值</span><span class="p">)</span>
 <span class="gp">...</span>
-<span class="go">0 石头</span>
-<span class="go">1 剪刀</span>
-<span class="go">2 布</span>
+<span class="go">0 唐僧</span>
+<span class="go">1 孙悟空</span>
+<span class="go">2 猪八戒</span>
+<span class="go">3 沙僧</span>
 </pre></div>
 </div>
 <p>To loop over two or more sequences at the same time, the entries can be paired
 with the <a class="reference internal" href="../library/functions.html#zip" title="zip"><code class="xref py py-func docutils literal notranslate"><span class="pre">zip()</span></code></a> function.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">问题</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;名字&#39;</span><span class="p">,</span> <span class="s1">&#39;追求&#39;</span><span class="p">,</span> <span class="s1">&#39;喜爱颜色&#39;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">答案</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;兰斯洛特&#39;</span><span class="p">,</span> <span class="s1">&#39;圣杯&#39;</span><span class="p">,</span> <span class="s1">&#39;蓝色&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">答案</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;玄奘&#39;</span><span class="p">,</span> <span class="s1">&#39;真经&#39;</span><span class="p">,</span> <span class="s1">&#39;无&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">问</span><span class="p">,</span> <span class="n">答</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">问题</span><span class="p">,</span> <span class="n">答案</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;你的</span><span class="si">{0}</span><span class="s1">是什么?  是</span><span class="si">{1}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">问</span><span class="p">,</span> <span class="n">答</span><span class="p">))</span>
 <span class="gp">...</span>
-<span class="go">你的名字是什么?  是兰斯洛特.</span>
-<span class="go">你的追求是什么?  是圣杯.</span>
-<span class="go">你的喜爱颜色是什么?  是蓝色.</span>
+<span class="go">你的名字是什么?   是玄奘.</span>
+<span class="go">你的追求是什么?   是真经.</span>
+<span class="go">你的喜爱颜色是什么?   是无.</span>
 </pre></div>
 </div>
 <p>To loop over a sequence in reverse, first specify the sequence in a forward
@@ -832,7 +833,7 @@ are not independent of the original dictionary -- it is only a <em>view</em>.</t
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 20, 2018.
+    Last updated on 6月 24, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.

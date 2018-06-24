@@ -1376,9 +1376,9 @@ the <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 a remote object). Exceptions are the same as for <a class="reference internal" href="#urllib.request.urlopen" title="urllib.request.urlopen"><code class="xref py py-func docutils literal notranslate"><span class="pre">urlopen()</span></code></a>.</p>
 <p>The second argument, if present, specifies the file location to copy to (if
 absent, the location will be a tempfile with a generated name). The third
-argument, if present, is a hook function that will be called once on
+argument, if present, is a callable that will be called once on
 establishment of the network connection and once after each block read
-thereafter.  The hook will be passed three arguments; a count of blocks
+thereafter.  The callable will be passed three arguments; a count of blocks
 transferred so far, a block size in bytes, and the total size of the file.  The
 third argument may be <code class="docutils literal notranslate"><span class="pre">-1</span></code> on older FTP servers which do not return a file
 size in response to a retrieval request.</p>
@@ -1701,7 +1701,7 @@ Functions defined by this module are used internally by the
     The Python Software Foundation is a non-profit corporation.
     <a href="https://www.python.org/psf/donations/">Please donate.</a>
     <br />
-    Last updated on 6月 20, 2018.
+    Last updated on 6月 24, 2018.
     <a href="../bugs.html">Found a bug</a>?
     <br />
     Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.7.2.
